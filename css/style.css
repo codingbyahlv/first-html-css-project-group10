@@ -1,0 +1,162 @@
+/*översta koderna är enbart för att få lite ramar på strukturen*/
+/*tas bort sedan*/
+header{border: 1px solid red;}
+main{border: 1px solid yellow; height: 80vh;}
+article{border: 1px solid green;}
+footer{border: 1px solid blue;}
+.content-container{border: 1px solid pink;}
+header{height: 15vh;}
+
+/*
+        ****** KOMMENTARER ******
+
+    *   Varje sidas unika sidinnehåll skrivs i sectioner med 
+        class .content-container mellan main-taggarna. Inom varje 
+        sektion kör vi sedan fri layout.
+    *   Det är bra om vi använder col- klasser till tillägg till 
+        klasserna för att styra bredder istället för att sätta width på mycket. 
+        Det underlättar arbetet enormt för att göra sidan responsiv.
+    *   Permanenta kommentarer som ska vara kvar = engelska
+    *   "Arbetskommentarer" som ska bort = svenska
+
+    ...fyll gärna på med mer som gör det enklare att jobba tillsammans... 
+
+
+*/
+
+
+
+
+
+/* ****** HÄR BÖRJAR RIKTIG KOD ****** */
+
+/* For small screens */
+[class*="col-"]{
+    width: 100%;
+}
+
+/* For desktop*/
+@media screen and (min-width: 800px){ /*när vi är klara kan vi ta bort de som ej används*/
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;} 
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/*övergripande styling*/
+* {
+    box-sizing: border-box; /*gör att alla boxar får den totala width man faktiskt skriver in*/
+    margin: 0; /*tar bort all förbestämd marginal för att helt kunna styra själv*/
+    padding: 0; /*tar bort all förbestämd padding för att helt kunna styra själv*/
+}
+body{
+    font-family: Arial, Helvetica, sans-serif; /*la bara in någon för mallens skull*/
+}
+
+
+/*grundstyling huvud-containers inkl artiklar*/
+.content-container{
+    margin: 50px auto;
+}
+.content-container article{
+    margin-top: 20px;
+}
+.content-container h2{
+    margin: 20px 0;
+    color:red;
+}
+.content-container h3{
+    margin: 5px 0;
+    color:blue;
+}
+.content-container h4{
+    margin: 5px 0;
+    color: red;
+}
+.content-container p{
+    margin: 5px 0;
+    color:black;
+}
+
+/*styling tooltip för snabbmeddelandefunktion*/
+.tooltip-container{
+    position: fixed;
+        top: 70%;
+        right: 20px;
+    padding: 15px;
+    background-color:rgba(109, 191, 194, 0.671);
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+.tooltip-container form{
+    display: none;
+}
+.tooltip-container h4{
+    margin: 10px 0;
+    font-size:24px;
+}
+.tooltip-container input{
+    display: block;
+    width: 200px;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+.tooltip-container textarea{
+    display: block;
+    width: 200px;
+    height: 70px;
+    margin-top: 10px;
+    border: 1px solid white;
+}
+.tooltip-container button{
+    margin-top: 10px;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+.tooltip-container button:hover{
+    background-color: white;
+    color: rgba(109, 191, 194, 0.671);
+}
+.tooltip-container:hover form{
+    display: block;
+    font-size: 16px;
+}
+.tooltip-container:hover{
+    width: auto;
+    height: auto;
+    border-radius: 15px;
+    text-align: left;
+}
+.tooltip-container:hover i{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    height: 10vh;
+}
