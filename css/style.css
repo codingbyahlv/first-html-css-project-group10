@@ -200,14 +200,15 @@ footer{
 .footer-wrapper a{
     transition: 0.5s;
 }
-.footer-wrapper a:hover{
-    color: rgb(109, 191, 194);
-}
 .newsletter-wrapper{
     color: white;
 }
 .newsletter-wrapper input{
     padding: 10px;
+}
+.newsletter-wrapper input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
 }
 .newsletter-wrapper button{
     padding: 10px;
@@ -225,6 +226,9 @@ footer{
     color: white;
     text-decoration: none;
 }
+.social-media a:hover{
+    color: rgb(109, 191, 194);
+}
 .social-media i{
     font-size: 1.3em;
 }
@@ -234,8 +238,11 @@ footer{
     color: white;  
 }
 .contact-wrapper a{
-    color: white;
+    color: rgb(109, 191, 194);
     text-decoration: none;
+}
+.contact-wrapper a:hover{
+    color: white;
 }
 .mail-us, 
 .call-us, 
