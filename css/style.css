@@ -1,11 +1,10 @@
-/* For small screens */
+/*mobile*/
 [class*="col-"]{
     width: 100%;
-    padding: 10px;
 }
 
-/* For desktop*/
-@media screen and (min-width: 800px){ /*när vi är klara kan vi ta bort de som ej används*/
+/*desktop*/
+@media screen and (min-width: 800px){
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -20,7 +19,7 @@
     .col-12 {width: 100%;}
 }
 
-/*MAINSTYLING*/
+/*mainstyling*/
 * {
     box-sizing: border-box; /*gör att alla boxar får den totala width man faktiskt skriver in*/
     margin: 0; /*tar bort all förbestämd marginal för att helt kunna styra själv*/
@@ -29,8 +28,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif; /*la bara in någon för mallens skull*/
 }
-
-/*mainstyling - containers*/
 .content-container{
     margin: 50px auto;
 }
@@ -39,15 +36,16 @@ body{
 }
 .content-container h2{
     margin: 20px 0;
-    color:red;
+    color: rgb(109, 191, 194);
+    text-transform: uppercase;
 }
 .content-container h3{
     margin: 5px 0;
-    color:blue;
+    color:rgb(109, 191, 194);
 }
 .content-container h4{
     margin: 5px 0;
-    color: green;
+    color:rgb(109, 191, 194);
 }
 .content-container p{
     margin: 5px 0;
@@ -55,7 +53,7 @@ body{
     line-height: 1.5em; /*justerar radhöjden så det blir mer lättläst*/
 }
 
-/*header, navigation, logo*/
+/*header, logo,  navigation*/
 .header-container{/*container för logotyp och navigering*/      
     display: flex;
     flex-wrap: wrap;
@@ -92,27 +90,32 @@ body{
 .company-name h1{
     font-size: 20px;
 }
-.navbar{/*container navigering*/
-    height: 100%;/*använd om navbaren ska ligga i headerna*/
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.navbar{
+    display: none;
 }
-.navbar ul{
-    display: flex;
-}
-.navbar li{
-    padding: 10px;
-    list-style: none;
-}
-.navbar a{
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;  
-}
-.navbar a:hover {
-    text-decoration: underline;
+@media screen and (min-width: 800px){
+    .navbar{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .navbar li{
+        padding: 10px;
+        list-style: none;
+    }
+    .navbar a{
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;  
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
 }
 
 /*tooltip - contact*/
@@ -176,7 +179,7 @@ body{
     display: none;
 }
 
-/*section - footer*/
+/*footer*/
 footer{
     background-color: rgba(40, 56, 60, 0.87);
     padding-top: 30px;
@@ -186,13 +189,19 @@ footer{
     flex-wrap: wrap;
 }
 .footer-wrapper h2{
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 15px;
     border-bottom: 1px solid white;
     margin-right: 30px;
 }
 .footer-wrapper p{
     color: white;
+}
+.footer-wrapper a{
+    transition: 0.5s;
+}
+.footer-wrapper a:hover{
+    color: rgb(109, 191, 194);
 }
 .newsletter-wrapper{
     color: white;
