@@ -54,7 +54,7 @@ body{
 }
 
 /*header, logo,  navigation*/
-.header-container{/*container för logotyp och navigering*/      
+.header-container{    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -68,7 +68,7 @@ body{
     color: white;
     z-index: 3;
 }
-.logo-container{/*fixerad container för logo*/
+.logo-container{
     height: 8vh;
     margin-left: 20px;
     padding: 5px;
@@ -237,7 +237,9 @@ footer{
     color: white;
     text-decoration: none;
 }
-.mail-us, .call-us, .adress{
+.mail-us, 
+.call-us, 
+.adress{
     margin-bottom: 30px;
 }
 .map img{
