@@ -31,12 +31,24 @@ body{
 .content-container{
     margin: 50px auto;
 }
+
 .content-container article{
     margin-top: 20px;
 }
+/*
 .content-container h2{
     margin: 20px 0;
     color: rgb(109, 191, 194);
+    text-transform: uppercase;
+}
+*/
+.content-container h2{
+    margin: 70px 0 50px 0;
+    padding: 30px 0;
+    color: rgb(109, 191, 194);
+    border-top: 1px solid rgba(109, 191, 194, 0.671);
+    border-bottom: 1px solid rgb(109, 191, 194);
+    text-align: center;
     text-transform: uppercase;
 }
 .content-container h3{
@@ -172,6 +184,7 @@ body{
 .tooltip-container:hover{
     width: auto;
     height: auto;
+    background-color:rgba(109, 191, 194, 0.8);
     border-radius: 15px;
     text-align: left;
 }
@@ -187,15 +200,20 @@ footer{
 .footer-wrapper{
     display: flex;   
     flex-wrap: wrap;
+    margin: 0 30px;
 }
 .footer-wrapper h2{
     margin-top: 40px;
     margin-bottom: 15px;
     border-bottom: 1px solid white;
     margin-right: 30px;
+    color: rgb(109, 191, 194);
+    text-transform: uppercase;
 }
 .footer-wrapper p{
+    margin: 5px 0;
     color: white;
+    line-height: 1.5em;
 }
 .footer-wrapper a{
     transition: 0.5s;
@@ -205,6 +223,7 @@ footer{
 }
 .newsletter-wrapper input{
     padding: 10px;
+    border-radius: 3px;
 }
 .newsletter-wrapper input:focus{
     outline: none;
@@ -213,7 +232,9 @@ footer{
 .newsletter-wrapper button{
     padding: 10px;
     border: 0;
+    border-radius: 3px;
     text-transform: uppercase;
+    transition: 0.5s;
 }
 .newsletter-wrapper button:hover{
     background-color:rgba(109, 191, 194, 0.493);
@@ -250,7 +271,6 @@ footer{
     margin-bottom: 30px;
 }
 .map img{
-    width: 100%;
     object-fit: contain;
 }
 .copyright{
@@ -259,4 +279,11 @@ footer{
     background-color: black;
     color: white;
     text-align: right;
+}
+@media screen and (min-width: 800px) {
+    .footer-wrapper{
+        justify-content: space-around;
+        margin: 0;
+    }
+    
 }
