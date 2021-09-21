@@ -3,41 +3,60 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TITEL</title><!--Lägg in titel-->
+        <title>[Företagsnamn] Hotell & Spa | Välkommen</title><!--Byt ut sista på titeln för varje sida-->
         <meta name="description" content="BESKRIVNING"><!--Lägg in beskrivning-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="media/img/p0-logo.png">
         <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script><!--länk till FontAwesome-->
-        <script src=""></script><!--kod för ev. javascript som ska komma före-->
+        
+        <!--
+        
+         OM NÅGON VILL SPECIALLÄNKA FONTER LÄGGS DE HÄR
+        
+        
+        -->
+        
+        <script src=""></script><!--kod för ev. javascript som ska komma före-->    
     </head>
+
     <body>
         <header class="header-container">
-            <div class="logo-container">
-                <img src="https://via.placeholder.com/200x100" class="logo">
-            </div>
+            <a href="index.html" class="logo-container">
+                <img src="media/img/p0-logo.png" alt="Company logotype" class="logo">
+                <div class="company-name">
+                    <h1>[Företagsnamn]</h1>  
+                    <h1>Hotell & Spa</h1> 
+                 </div>
+            </a>
+            <!--navigation desktop-->
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Hem</a></li>
-                    <li><a href="/pages/spa.html">Spa</a></li>
-                    <li><a href="/pages/hotel.html">Hotell</a></li>
-                    <li><a href="/pages/restaurant.html">Restaurang</a></li>               
+                    <li><a href="pages/hotel.html">Hotell</a></li>
+                    <li><a href="pages/spa.html">Spa</a></li>  
+                    <!--plats för restauranglänk-->                   
+                    <li><a href="#contact-section">Kontakt</a></li>          
                 </ul>
             </nav>
-        </header>
-
-<!--SEKTION - LANDING IMAGE-->
-        <div class="landing-container">
-            <img class="landing-image" src="media/img/elba-3715707_1920.jpg">
-            <div class="landing-overlay">
-                <div class="landing-overlay-name">
-                    <h1>Företagsnamn</h1>
-                    <h2>Resort och Spa</h2>
-                </div>
+            <!--navigation mobile-button-->
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
             </div>
+        </header>
+        <!--navigation mobile-->
+        <div class="mobile-menu">      
+            <nav class="mobile-navbar">               
+                <a class="mobile-link" href="index.html">Hem</a>
+                <a class="mobile-link" href="pages/hotel.html">Hotell</a>
+                <a class="mobile-link" href="pages/spa.html">Spa</a>   
+                <!--plats för restauranglänk-->                 
+                <a class="mobile-link" href="#contact-section">Kontakt</a>                       
+            </nav>
         </div>
-<!--SLUT LANDING IMAGE-->
 
-<!-- SNABBMEDDELANDEFUNKTION -->
+        <!--tooltip - contact-->
         <div class="tooltip-container">
             <i class="far fa-comment"></i>
             <form onsubmit="onSubmit()">
@@ -49,79 +68,456 @@
             </form>
         </div>
 
+        <!--section - landing image-->      
+        <section id="landing-image" class="landing-container">
+            <img class="landing-image" src="media/img/p1-landing-image.jpg" alt="Seaview">         
+            <div class="landing-overlay">
+                <div class="landing-overlay-text-wrapper">
+                    <div>
+                        <h2>Ladda batterierna
+                        <br>inför hösten</h2>                   
+                    </div>
+                    <a href="#news"><button>Läs mer om höstens erbjudanden</button></a>
+                </div>
+                <article id="small-booking" class="small-booking-wrapper hide-small shadow-2">
+                    <h2>Bokning</h2>                
+                    <form>
+                        <div class="small-booking-container">                                                                      
+                               <div class="small-booking-choice">
+                                    <h3>Ankomst</h3>
+                                    <select name="datum" size="1">                                                   
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="4">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                    </select>             
+                                    <select name="månad" size="1">                                               
+                                        <option value="sep">SEP</option>
+                                        <option value="okt">OKT</option>
+                                        <option value="nov">NOV</option>
+                                        <option value="dec">DEC</option>
+                                        <option value="jan">JAN</option>
+                                        <option value="feb">FEB</option>
+                                        <option value="mar">MAR</option>
+                                        <option value="apr">APR</option>
+                                        <option value="maj">MAJ</option>
+                                        <option value="jun">JUN</option>
+                                        <option value="jul">JUL</option>
+                                        <option value="aug">AUG</option>
+                                    </select>				                                                           
+                                </div>
+                                <div class="small-booking-choice">
+                                    <h3>Avresa</h3> 
+                                    <select name="datum" size="1">                                                                                              
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="4">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                            <option value="22">22</option>
+                                            <option value="23">23</option>
+                                            <option value="24">24</option>
+                                            <option value="25">25</option>
+                                            <option value="26">26</option>
+                                            <option value="27">27</option>
+                                            <option value="28">28</option>
+                                            <option value="29">29</option>
+                                            <option value="30">30</option>
+                                            <option value="31">31</option>
+                                            <option value="1">1</option>
+                                    </select>             
+                                    <select name="månad" size="1">                                               
+                                            <option value="sep">SEP</option>
+                                            <option value="okt">OKT</option>
+                                            <option value="nov">NOV</option>
+                                            <option value="dec">DEC</option>
+                                            <option value="jan">JAN</option>
+                                            <option value="feb">FEB</option>
+                                            <option value="mar">MAR</option>
+                                            <option value="apr">APR</option>
+                                            <option value="maj">MAJ</option>
+                                            <option value="jun">JUN</option>
+                                            <option value="jul">JUL</option>
+                                            <option value="aug">AUG</option>
+                                    </select>				                                                           
+                                </div>                        
+                        </div>                                        
+                        <button type="submit">Sök rum och priser</button>                                                          
+                    </form>            
+                </article>               
+            </div>
+        </section>
 
         <main>
-        <!-- start innehåll -->
-
-           <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                </article> 
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-                </article>
+            <!--section - welcome-->
+            <section id="welcome-container" class="content-container col-8">    
+                <h2 class="col-12">Välkommen till [Företagsnamn]</h2>                                 
+                <div class="text-img">                  
+                    <div class="left-side col-5">                                                
+                        <p>Här står det lite om hotellet och dess utbud för att locka tll vistelse.
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Reiciendis natus minus, accusantium officia veniam 
+                            necessitatibus ut omnis in placeat suscipit quis, quod 
+                            possimus, optio inventore ipsam facere? Aut, provident? 
+                            Repellat. Lorem ipsum dolor sit amet, consectetur adipisicing 
+                            elit. Repudiandae quia voluptatum dignissimos nesciunt? 
+                            Ab sunt, iusto natus consectetur incidunt, tempore 
+                            exercitationem dicta blanditiis velit quam quo quasi eum 
+                            itaque? Reiciendis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                            Reiciendis natus minus, accusantium officia veniam 
+                            necessitatibus ut omnis in placeat suscipit quis, quod 
+                            possimus, optio inventore ipsam facere? Aut, provident? 
+                            Repellat. Lorem ipsum dolor sit amet, consectetur adipisicing 
+                            elit. Repudiandae quia voluptatum dignissimos nesciunt? 
+                            Ab sunt, iusto natus consectetur incidunt, tempore 
+                            exercitationem dicta blanditiis velit quam quo quasi eum 
+                            itaque? Reiciendis!</p>                          
+                    </div>        
+                    <div class="right-side col-6">
+                        <div class="welcome-slider shadow-2">
+                            <figure>
+                                <img src="media/img/p1-room.jpg" alt="">
+                                <img src="media/img/p1-spa.jpg" alt="">
+                                <img src="media/img/p1-outside.jpg" alt="">
+                                <img src="media/img/p1-relax.jpg" alt="">
+                                <img src="media/img/p1-food.jpg" alt="">                                     
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <h3>Ev underrubrik (article)</h3>
-                <p>Det här är en sektion med innehåll. 
-                Sätt ytterligare klass för att styra sektionens specifika innehåll.</p>
-            </section> 
-
-            <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                </article> 
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-                </article>
+            <!--section - news-->           
+            <section id="news" class="news-section-wrapper content-container col-8">
+                <h2 class="col-12">Just nu</h2>
+                <div class="news-card-section-wrapper">
+                    <div class="news-card-container col-3 shadow-1">                         
+                        <img src="media/img/p1-hotel.jpg" alt="" class="news-card-container-image">                   
+                        <div class="middle-header">
+                            <h2>Hotell</h2>
+                            <p>Läs mer vad hotellet erbjuder</p>
+                            <a href="pages/hotel.html#package-container"><button>Läs mer</button></a>
+                        </div>
+                        <div class="middle-overlay">                       
+                            <i class="fas fa-bed"></i>
+                            <p>Just nu på vårt hotell. 
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                                    
+                            <a href="pages/hotel.html#package-container"><button>Läs mer</button></a>                       
+                        </div>  
+                    </div>
+                    <div class="news-card-container col-3 shadow-1">                         
+                        <img src="media/img/p1-massage.jpg" alt="" class="news-card-container-image">                   
+                        <div class="middle-header">
+                            <h2>Spa</h2>
+                            <p>Erbjudanden från spa-avdelningen</p>
+                            <a href="pages/spa.html"><button>Läs mer</button></a> 
+                        </div>
+                        <div class="middle-overlay">                       
+                            <i class="fas fa-spa"></i>
+                            <p>Just nu på vår spa-avdelning. 
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                                    
+                                <a href="pages/spa.html"><button>Läs mer</button></a>                       
+                        </div>  
+                    </div>
+                    <div class="rest-container col-3 shadow-1">                         
+                        <img src="media/img/p1-restaurant.jpg" alt="" class="news-card-container-image">                   
+                        <div class="middle-header">
+                            <h2>Restaurang</h2>
+                        </div>
+                        <div class="rest-overlay shadow-2">
+                            <p>Öppnar inom kort</p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <h3>Ev underrubrik (article)</h3>
-                <p>Det här är en sektion med innehåll. 
-                Sätt ytterligare klass för att styra sektionens specifika innehåll.</p>
-            </section> 
-            
+            <!--section - parallax background-->
+            <div class="background-2">
+            </div>
 
-            
-            
-        <!-- slut innehåll -->
+            <!--section - booking-->
+            <section id="big-booking" class="big-booking-wrapper content-container col-8">
+                <h2 class="col-12">Bokning</h2>
+                <div class="big-booking-text col-5">
+                    <p>Boka din drömvistelse. Lorem ipsum dolor sit, amet consectetur 
+                        adipisicing elit. Harum cupiditate officia esse id repudiandae! 
+                        Quasi mollitia, quis sint facilis dolores commodi iusto aspernatur 
+                        doloremque facere aut. Corrupti esse dolorem quidem?</p>
+                    <p>Boka din drömvistelse. Lorem ipsum dolor sit, amet consectetur 
+                        adipisicing elit. Harum cupiditate officia esse id repudiandae! 
+                        Quasi mollitia, quis sint facilis dolores commodi iusto aspernatur 
+                        doloremque facere aut. Corrupti esse dolorem quidem?</p>
+                </div>        
+                <form clas="col-6">
+                    <div class="big-booking-container">
+                        <div class="booking-form-calendar"> 
+                            <h3>Kalender</h3>
+                            <i class="far fa-calendar-alt"></i>
+                        </div>  
+                        <div class="big-booking-choice">
+                            <h3>Ankomst</h3>
+                            <select name="datum" size="1">
+                                <option>Välj datum</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="4">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>             
+                            <select name="månad" size="1">
+                                <option>Välj månad</option>
+                                <option value="jan">Januari</option>
+                                <option value="feb">Februari</option>
+                                <option value="mar">Mars</option>
+                                <option value="apr">April</option>
+                                <option value="maj">Maj</option>
+                                <option value="jun">Juni</option>
+                                <option value="jul">Juli</option>
+                                <option value="aug">Augusti</option>
+                                <option value="sep">September</option>
+                                <option value="okt">Oktober</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                            <select name="år" size="1">
+                                <option>Välj år</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                        </select>
+                        </div>
+                        <div class="big-booking-choice">
+                            <h3>Ankomst</h3>
+                            <select name="datum" size="1">
+                                <option>Välj datum</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="4">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>             
+                            <select name="månad" size="1">
+                                <option>Välj månad</option>
+                                <option value="jan">Januari</option>
+                                <option value="feb">Februari</option>
+                                <option value="mar">Mars</option>
+                                <option value="apr">April</option>
+                                <option value="maj">Maj</option>
+                                <option value="jun">Juni</option>
+                                <option value="jul">Juli</option>
+                                <option value="aug">Augusti</option>
+                                <option value="sep">September</option>
+                                <option value="okt">Oktober</option>
+                                <option value="nov">November</option>
+                                <option value="dec">December</option>
+                            </select>
+                            <select name="år" size="1">
+                                <option>Välj år</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                        </select>                                
+                        </div>
+                        <div class="big-booking-choice">
+                            <h3>Paket</h3>
+                            <select name="hotell" size="1">
+                                <option>Välj hotellpaket</option>
+                                <option value="hot-1">Hotellpaket 1</option>
+                            </select>  
+                            <select name="spa" size="1">
+                                <option>Välj spapaket</option>
+                                <option value="spa-1">Spapaket 1</option>
+                            </select>  
+                            <select name="restaurant" size="1">
+                                <option>Välj restaurangpaket</option>
+                                <option value="rest-1">Restaurangpaket 1</option>
+                            </select>   
+                        </div>
+                    </div>
+                    <div>
+                        <button>Sök tillgänglighet och pris</button>
+                    </div>
+                </form>
+            </section>
+
+            <!--section - reviews-->
+            <div class="background-1"> 
+                <section id="reviews" class="review-card-wrapper content-container col-8"> 
+                	<div class="review-card">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="review">                            
+                            <p class="review-text">Här står det en recension.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                            <p class="review-name">- [Namn] -</p>
+                        </div>                        
+                    </div>    
+                	<div class="review-card">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="review">                          
+                            <p class="review-text">Här står det en recension. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                            <p class="review-name">- [Namn] -</p> 
+                        </div>                        
+                    </div>
+                	<div class="review-card">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="review">                            
+                            <p class="review-text">Här står det en recension. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                            <p class="review-name">- [Namn] -</p>
+                        </div>                        
+                    </div>
+                    <div class="review-card">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="review">                            
+                            <p class="review-text">Här står det en recension. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                            <p class="review-name">- [Namn] -</p>
+                        </div>                        
+                    </div>
+                </section>                                   
+            </div>
         </main>
       
-        
+
         <footer>
-            [ HÄR SKA EN FOOTER VARA ]
+            <section id="contact-section" class="footer-wrapper">
+                <div class="col-3">
+                    <form class="newsletter-wrapper">
+                        <h2>Nyhetsbrev</h2>
+                        <p>Ta del av erbjudanden och nyheter före alla andra</p>
+                        <input type="text" placeholder="Fyll i din e-postadress" required/>
+                        <button type="submit">Anmäl mig!</button>
+                    </form>
+                    <div class="social-media">
+                        <h2>Sociala medier</h2>
+                        <p>@[Företagsnamn]HotelSpa</p>
+                        <p><a href="#"><i class="fab fa-instagram"></i> Instagram </a> | 
+                            <a href="#"><i class="fab fa-facebook"></i> Facebook </a></p>
+                    </div>
+                </div>
+                <div class="contact-wrapper col-5">
+                    <h2 class="col-12">Kontakt</h2>
+                    <div class="contact col-6">
+                        <div class="mail-us">
+                            <h3><a href="mailto:exempel@epost.se">Maila oss!</a></h3>
+                            <p><i class="fa fa-envelope"></i> exempel@epost.se</p>
+                        </div>
+                        <div class="call-us">
+                            <h3><a href="tel:+46700112233">Ring oss!</a></h3>
+                            <p><i class="fa fa-phone"></i> +46700112233</p>
+                        </div>
+                    </div>
+                    <div class="adress col-6">
+                        <h3>Besök oss!</h3>  
+                        <p>Xxxxxxgatan 25</p>
+                        <p>000 00 Xxxxstaden</p>
+                        <div class="map">
+                            <img src="https://via.placeholder.com/300x300">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <p class="copyright col-12">Copyright <i class="far fa-copyright"></i> [Företagsnamn] Hotell & Spa 2021</p>
         </footer>
 
-
-        
         <script src="script/main.js"></script><!--kod för javascript som ska komma efter-->
     </body>
 </html>

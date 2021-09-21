@@ -1,42 +1,10 @@
-/*översta koderna är enbart för att få lite ramar på strukturen*/
-/*tas bort sedan*/
-header{border: 1px solid red;}
-main{border: 1px solid yellow;}
-article{border: 1px solid green;}
-footer{border: 1px solid blue;}
-.content-container{border: 1px solid pink;}
-header{height: 15vh;}
-
-/*
-        ****** KOMMENTARER ******
-
-    *   Varje sidas unika sidinnehåll skrivs i sectioner med 
-        class .content-container mellan main-taggarna. Inom varje 
-        sektion kör vi sedan fri layout.
-    *   Det är bra om vi använder col- klasser till tillägg till 
-        klasserna för att styra bredder istället för att sätta width på mycket. 
-        Det underlättar arbetet enormt för att göra sidan responsiv.
-    *   Permanenta kommentarer som ska vara kvar = engelska
-    *   "Arbetskommentarer" som ska bort = svenska
-
-    ...fyll gärna på med mer som gör det enklare att jobba tillsammans... 
-
-
-*/
-
-
-
-
-
-/* ****** HÄR BÖRJAR RIKTIG KOD ****** */
-
-/* For small screens */
+/*mobile*/
 [class*="col-"]{
     width: 100%;
 }
 
-/* For desktop*/
-@media screen and (min-width: 800px){ /*när vi är klara kan vi ta bort de som ej används*/
+/*desktop*/
+@media screen and (min-width: 800px){
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -51,7 +19,7 @@ header{height: 15vh;}
     .col-12 {width: 100%;}
 }
 
-/*övergripande styling*/
+/*mainstyling*/
 * {
     box-sizing: border-box; /*gör att alla boxar får den totala width man faktiskt skriver in*/
     margin: 0; /*tar bort all förbestämd marginal för att helt kunna styra själv*/
@@ -60,37 +28,185 @@ header{height: 15vh;}
 body{
     font-family: Arial, Helvetica, sans-serif; /*la bara in någon för mallens skull*/
 }
-
-
-/*grundstyling huvud-containers inkl rubriker och artiklar*/
 .content-container{
     margin: 50px auto;
 }
+
 .content-container article{
     margin-top: 20px;
 }
+/*
 .content-container h2{
     margin: 20px 0;
-    color:red;
+    color: rgb(109, 191, 194);
+    text-transform: uppercase;
+}
+*/
+.content-container h2{
+    margin: 70px 0 50px 0;
+    padding: 30px 0;
+    color: rgb(109, 191, 194);
+    border-top: 1px solid rgba(109, 191, 194, 0.671);
+    border-bottom: 1px solid rgb(109, 191, 194);
+    text-align: center;
+    text-transform: uppercase;
 }
 .content-container h3{
     margin: 5px 0;
-    color:blue;
+    color:rgb(109, 191, 194);
 }
 .content-container h4{
     margin: 5px 0;
-    color: green;
+    color:rgb(109, 191, 194);
 }
 .content-container p{
     margin: 5px 0;
     color:black;
+    line-height: 1.5em; /*justerar radhöjden så det blir mer lättläst*/
 }
 
-/*styling tooltip för snabbmeddelandefunktion*/
-.tooltip-container{
+/*header, logo,  navigation*/
+.header-container{    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 8vh;
     position: fixed;
-        bottom: 5%;
-        right: 20px;
+        top: 0;
+        left: 0;
+    background-color: rgba(0, 0, 0, 0.514);
+    color: white;
+    z-index: 3;
+}
+.logo-container{
+    height: 8vh;
+    margin-left: 20px;
+    padding: 5px;
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+.logo{
+    height: 100%;
+    object-fit: contain;
+}
+.company-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 5px;
+}
+.company-name h1{
+    font-size: 20px;
+}
+.navbar{
+    display: none;
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+.menu-btn-burger {
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    transition: 0.5s;
+}
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    transition: 0.5s;
+}
+.menu-btn-burger::before {
+    transform: translateY(-10px);
+}
+.menu-btn-burger::after {
+    transform: translateY(10px);
+}
+.menu-btn.open .menu-btn-burger{
+    transform: rotate(180deg);
+    background-color: transparent;
+}
+.menu-btn.open .menu-btn-burger::before{
+    transform: rotate(45deg);
+}
+.menu-btn.open .menu-btn-burger::after{
+    transform: rotate(-45deg);
+}
+.mobile-menu{
+    min-height: 60vh;
+    width: 100%;
+    padding-top: 8vh;
+    background-color: black;
+    position: fixed;
+    right: -100%;
+    z-index: 2;
+    transition: 0.5s;
+}
+.mobile-navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mobile-link{
+    width: 100%;
+    padding: 30px;
+    border: 0;
+    color: white;
+    font-size: 1.3em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; 
+}
+.mobile-navbar:first-child{
+    border-top: 1px solid white;
+}
+
+@media screen and (min-width: 800px){
+    .navbar{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .navbar ul{
+        display: flex;
+    }
+    .navbar li{
+        padding: 10px;
+        list-style: none;
+    }
+    .navbar a{
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;  
+    }
+    .navbar a:hover {
+        text-decoration: underline;
+    }
+    .menu-btn{
+        display: none;
+    }
+}
+
+/*tooltip - contact*/
+.tooltip-container{  
+    position: fixed;
+        bottom: 7%;
+        right: 20px;  
     padding: 15px;
     background-color:rgba(109, 191, 194, 0.671);
     border: 1px solid white;
@@ -98,25 +214,27 @@ body{
     color: white;
     font-size: 30px;
     text-align: center;
+    z-index: 2;
 }
 .tooltip-container form{
     display: none;
+    transition: 0.8s;
 }
 .tooltip-container h4{
     margin: 10px 0;
     font-size:24px;
 }
 .tooltip-container input{
-    display: block;
     width: 200px;
     margin-top: 10px;
+    display: block;
     border: 1px solid white;
 }
-.tooltip-container textarea{
-    display: block;
+.tooltip-container textarea{  
     width: 200px;
     height: 70px;
     margin-top: 10px;
+    display: block;
     border: 1px solid white;
 }
 .tooltip-container button{
@@ -138,6 +256,7 @@ body{
 .tooltip-container:hover{
     width: auto;
     height: auto;
+    background-color:rgba(109, 191, 194, 0.8);
     border-radius: 15px;
     text-align: left;
 }
@@ -145,110 +264,97 @@ body{
     display: none;
 }
 
-/*STYLING INDEXSIDAN*/
-.header-container{/*container för logotyp och navigering*/      
-    width: 100%;
-    height: 8vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.315);
+/*footer*/
+footer{
+    background-color: rgba(40, 56, 60, 0.87);
+    padding-top: 30px;
+}
+.footer-wrapper{
+    display: flex;   
+    flex-wrap: wrap;
+    margin: 0 30px;
+}
+.footer-wrapper h2{
+    margin-top: 40px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid white;
+    margin-right: 30px;
+    color: rgb(109, 191, 194);
+    text-transform: uppercase;
+}
+.footer-wrapper p{
+    margin: 5px 0;
     color: white;
-    z-index: 3;
+    line-height: 1.5em;
 }
-
-.logo-container{/*fixerad container för logo*/
-    position: fixed;
-        top: 0px;
-        left: 0px;
-    height: 8vh;
+.footer-wrapper a{
+    transition: 0.5s;
 }
-.logo{/*bild - logo*/
-    height: 100%;
-    object-fit: contain;
-}
-
-.navbar{/*container navigering*/
-    height: 100%;/*använd om navbaren ska ligga i headerna*/
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    /*ta bort nedan om navbaren ska ligga i headern*/
-    /*width: 100%;
-    height: 8vh;
-    position:sticky;
-    top: 0;
-    left: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+.newsletter-wrapper{
     color: white;
-    z-index: 3;*/
 }
-.navbar ul{
-    display: flex;
-}
-.navbar li{
-    list-style: none;
+.newsletter-wrapper input{
     padding: 10px;
+    border-radius: 3px;
 }
-.navbar a{
+.newsletter-wrapper input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
+}
+.newsletter-wrapper button{
     padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.newsletter-wrapper button:hover{
+    background-color:rgba(109, 191, 194, 0.493);
+}
+.social-media p{
+    color: white;
+    margin-bottom: 10px;
+}
+.social-media a{
     color: white;
     text-decoration: none;
-    text-transform: uppercase;  
 }
-.navbar a:hover {
-    text-decoration: underline;
+.social-media a:hover{
+    color: rgb(109, 191, 194);
 }
-
-.landing-container{
-    width: 100%;
-    height: 100vh;
+.social-media i{
+    font-size: 1.3em;
 }
-.landing-image{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
+.contact-wrapper{
+    display: flex;  
+    flex-wrap: wrap;
+    color: white;  
 }
-.landing-overlay{
-    position: absolute;
-        top: 0;
-        left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contact-wrapper a{
+    color: rgb(109, 191, 194);
+    text-decoration: none;
 }
-.landing-overlay-name{
-    text-align: center;
-    padding: 70px;
-    padding-top: 100px;
-    border: 1px solid white;
-    border-radius: 15px;
+.contact-wrapper a:hover{
     color: white;
-    letter-spacing: 0.1em;
-    background-color: rgba(0, 0, 0, 0.315);
 }
-.landing-overlay-name h1{
-    text-transform: uppercase;
-    font-size: 4em;    
+.mail-us, 
+.call-us, 
+.adress{
+    margin-bottom: 30px;
 }
-.landing-overlay-name h2{
-    font-size: 2em;
+.map img{
+    object-fit: contain;
 }
-
-
-
-
-
-
-
-
-
-footer{
-    height: 10vh;
+.copyright{
+    margin-top: 30px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: right;
+}
+@media screen and (min-width: 800px) {
+    .footer-wrapper{
+        justify-content: space-around;
+        margin: 0;
+    } 
 }

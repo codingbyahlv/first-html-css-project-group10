@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>TITEL</title><!--Lägg in titel-->
+        <meta name="description" content="BESKRIVNING"><!--Lägg in beskrivning-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/hotel.css">
+        <link rel="icon" href="/media/img/logo.png">
+        <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script><!--länk till FontAwesome-->
+        <!--NEDAN LÄNKNING HOTELSIDANS FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans+Condensed:wght@300;700&family=Tangerine&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TITEL</title>
-    <!--Lägg in titel-->
-    <meta name="description" content="BESKRIVNING">
-    <!--Lägg in beskrivning-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/hotel.css">
-    <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
-    
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Open+Sans+Condensed:wght@300;700&family=Tangerine&display=swap" rel="stylesheet">
-
-<!--länk till FontAwesome-->
-
-    <script src=""></script>
-    <!--kod för ev. javascript som ska komma före-->
-</head>
+        <script src=""></script><!--kod för ev. javascript som ska komma före-->
+    </head>
 
 <body>
     <header class="header-container">
-        <div class="logo-container">
-            <img src="https://via.placeholder.com/200x100" class="logo">
-        </div>
+        <a href="../index.html" class="logo-container">
+            <img src="../media/img/p0-logo.png" alt="Company logotype" class="logo">
+            <div class="company-name">
+                <h1>[Företagsnamn]</h1>  
+                <h1>Hotell & Spa</h1> 
+             </div>
+        </a>
         <nav class="navbar">
             <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="/pages/spa.html">Spa</a></li>
-                <li><a href="/pages/hotel.html">Hotell</a></li>
-                <li><a href="/pages/restaurant.html">Restaurang</a></li>
+                <li><a href="../index.html">Hem</a></li>
+                <li><a href="spa.html">Spa</a></li>
+                <li><a href="hotel.html">Hotell</a></li>
+                <li><a href="restaurant.html">Restaurang</a></li>
+                <li><a href="#contact-section">Kontakt</a></li> 
             </ul>
         </nav>
     </header>
+
+    <!--tooltip - contact-->
+    <div class="tooltip-container">
+        <i class="far fa-comment"></i>
+        <form onsubmit="onSubmit()">
+            <h4>Hej!</h4> 
+            <p>Vad kan vi hjälpa dig med?</p>
+            <input type="text" placeholder="E-post" required/>
+            <textarea placeholder="Skriv ditt meddelande här" required></textarea>
+            <button type="submit">Skicka</button>
+        </form>
+    </div>
 
     <!--SEKTION - LANDING IMAGE-->
     <div class="landing-container">
@@ -53,17 +65,7 @@
     </div>
     <!--SLUT LANDING IMAGE-->
 
-    <!-- SNABBMEDDELANDEFUNKTION -->
-    <div class="tooltip-container">
-        <i class="far fa-comment"></i>
-        <form onsubmit="onSubmit()">
-            <h4>Hej!</h4>
-            <p>Vad kan vi hjälpa dig med?</p>
-            <input type="text" placeholder="E-post" required />
-            <textarea placeholder="Skriv ditt meddelande här" required></textarea>
-            <button type="submit">Skicka</button>
-        </form>
-    </div>
+
 
     <main>
         <!-- start innehåll -->
@@ -260,19 +262,50 @@
                 </div>
             </div> 
         </section>
-</body>
+        <!-- slut innehåll -->
+    </main>
 
-</html>
+    <footer>
+        <section id="contact-section" class="footer-wrapper content-container col-8">
+            <div class="col-6">
+                <form class="newsletter-wrapper">
+                    <h2>Nyhetsbrev</h2>
+                    <p>Ta del av erbjudanden och nyheter före alla andra</p>
+                    <input type="text" placeholder="Fyll i din e-postadress" required/>
+                    <button type="submit">Anmäl mig!</button>
+                </form>
+                <div class="social-media">
+                    <h2>Sociala medier</h2>
+                    <p>@[Företagsnamn]HotelSpa</p>
+                    <p><a href="#"><i class="fab fa-instagram"></i> Instagram </a> | 
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook </a></p>
+                </div>
+            </div>
+            <div class="contact-wrapper col-6">
+                <h2 class="col-12">Kontakt</h2>
+                <div class="contact col-6">
+                    <div class="mail-us">
+                        <h3><a href="mailto:exempel@epost.se">Maila oss!</a></h3>
+                        <p>exempel@epost.se</p>
+                    </div>
+                    <div class="call-us">
+                        <h3><a href="tel:+46700112233">Ring oss!</a></h3>
+                        <p>+46700112233</p>
+                    </div>
+                </div>
+                <div class="adress col-6">
+                    <h3>Besök oss!</h3>  
+                    <p>Xxxxxxgatan 25</p>
+                    <p>000 00 Xxxxstaden</p>
+                    <div class="map">
+                        <img src="https://via.placeholder.com/300x300">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p class="copyright col-12">Copyright <i class="far fa-copyright"></i> [Företagsnamn] Hotell & Spa 2021</p>
+    </footer>
 
-<!-- slut innehåll -->
-</main>
-
-<footer>
-    [ HÄR SKA EN FOOTER VARA ]
-</footer>
-
-<script src="script/main.js"></script>
-<!--kod för javascript som ska komma efter-->
-</body>
-
+    <script src="script/main.js"></script><!--kod för javascript som ska komma efter-->
+    </body>
 </html>
