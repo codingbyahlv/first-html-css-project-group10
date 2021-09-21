@@ -30,20 +30,31 @@
                     <h1>Hotell & Spa</h1> 
                  </div>
             </a>
-            <!--navigation mobile-->
-            <!--LÄGG IN MOBILNAVIGERING-->
-
             <!--navigation desktop-->
             <nav class="navbar">
                 <ul>
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="pages/hotel.html">Hotell</a></li>
-                    <li><a href="pages/spa.html">Spa</a></li>                   
-                    <li><a href="pages/restaurant.html">Restaurang</a></li>   
+                    <li><a href="pages/spa.html">Spa</a></li>  
+                    <!--plats för restauranglänk-->                   
                     <li><a href="#contact-section">Kontakt</a></li>          
                 </ul>
             </nav>
+            <!--navigation mobile-button-->
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
         </header>
+        <!--navigation mobile-->
+        <div class="mobile-menu">      
+            <nav class="mobile-navbar">               
+                <a class="mobile-link" href="index.html">Hem</a>
+                <a class="mobile-link" href="pages/hotel.html">Hotell</a>
+                <a class="mobile-link" href="pages/spa.html">Spa</a>   
+                <!--plats för restauranglänk-->                 
+                <a class="mobile-link" href="#contact-section">Kontakt</a>                       
+            </nav>
+        </div>
 
         <!--tooltip - contact-->
         <div class="tooltip-container">
@@ -181,9 +192,9 @@
 
         <main>
             <!--section - welcome-->
-            <section id="welcome-container" class="content-container col-8">                                     
-                <div class="text-img">
-                    <h2 class="col-12">Välkommen till [Företagsnamn]</h2>
+            <section id="welcome-container" class="content-container col-8">    
+                <h2 class="col-12">Välkommen till [Företagsnamn]</h2>                                 
+                <div class="text-img">                  
                     <div class="left-side col-5">                                                
                         <p>Här står det lite om hotellet och dess utbud för att locka tll vistelse.
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
@@ -224,21 +235,25 @@
                 <h2 class="col-12">Just nu</h2>
                 <div class="news-card-section-wrapper">
                     <div class="news-card-container col-3 shadow-1">                         
-                        <img src="media/img/p1-massage.jpg" alt="" class="news-card-container-image">                   
+                        <img src="media/img/p1-hotel.jpg" alt="" class="news-card-container-image">                   
                         <div class="middle-header">
                             <h2>Hotell</h2>
+                            <p>Läs mer vad hotellet erbjuder</p>
+                            <a href="pages/hotel.html#package-container"><button>Läs mer</button></a>
                         </div>
                         <div class="middle-overlay">                       
                             <i class="fas fa-bed"></i>
                             <p>Just nu på vårt hotell. 
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                                    
-                            <a href="pages/hotel.html"><button>Läs mer</button></a>                       
+                            <a href="pages/hotel.html#package-container"><button>Läs mer</button></a>                       
                         </div>  
                     </div>
                     <div class="news-card-container col-3 shadow-1">                         
                         <img src="media/img/p1-massage.jpg" alt="" class="news-card-container-image">                   
                         <div class="middle-header">
                             <h2>Spa</h2>
+                            <p>Erbjudanden från spa-avdelningen</p>
+                            <a href="pages/spa.html"><button>Läs mer</button></a> 
                         </div>
                         <div class="middle-overlay">                       
                             <i class="fas fa-spa"></i>
@@ -247,17 +262,14 @@
                                 <a href="pages/spa.html"><button>Läs mer</button></a>                       
                         </div>  
                     </div>
-                    <div class="news-card-container col-3 shadow-1">                         
-                        <img src="media/img/p1-massage.jpg" alt="" class="news-card-container-image">                   
+                    <div class="rest-container col-3 shadow-1">                         
+                        <img src="media/img/p1-restaurant.jpg" alt="" class="news-card-container-image">                   
                         <div class="middle-header">
                             <h2>Restaurang</h2>
                         </div>
-                        <div class="middle-overlay">                       
-                            <i class="fas fa-utensils"></i>
-                            <p>Just nu på vår spa-avdelning. 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                                    
-                                <a href="pages/restaurant.html"><button>Läs mer</button></a>                       
-                        </div>  
+                        <div class="rest-overlay shadow-2">
+                            <p>Öppnar inom kort</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -424,7 +436,7 @@
             <!--section - reviews-->
             <div class="background-1"> 
                 <section id="reviews" class="review-card-wrapper content-container col-8"> 
-                	<div class="review-card col-3">
+                	<div class="review-card">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                            
                             <p class="review-text">Här står det en recension.
@@ -433,7 +445,7 @@
                             <p class="review-name">- [Namn] -</p>
                         </div>                        
                     </div>    
-                	<div class="review-card col-3">
+                	<div class="review-card">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                          
                             <p class="review-text">Här står det en recension. 
@@ -442,7 +454,16 @@
                             <p class="review-name">- [Namn] -</p> 
                         </div>                        
                     </div>
-                	<div class="review-card col-3">
+                	<div class="review-card">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="review">                            
+                            <p class="review-text">Här står det en recension. 
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p> 
+                            <p class="review-name">- [Namn] -</p>
+                        </div>                        
+                    </div>
+                    <div class="review-card">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                            
                             <p class="review-text">Här står det en recension. 
@@ -457,8 +478,8 @@
       
 
         <footer>
-            <section id="contact-section" class="footer-wrapper content-container col-8">
-                <div class="col-6">
+            <section id="contact-section" class="footer-wrapper">
+                <div class="col-3">
                     <form class="newsletter-wrapper">
                         <h2>Nyhetsbrev</h2>
                         <p>Ta del av erbjudanden och nyheter före alla andra</p>
@@ -472,7 +493,7 @@
                             <a href="#"><i class="fab fa-facebook"></i> Facebook </a></p>
                     </div>
                 </div>
-                <div class="contact-wrapper col-6">
+                <div class="contact-wrapper col-5">
                     <h2 class="col-12">Kontakt</h2>
                     <div class="contact col-6">
                         <div class="mail-us">

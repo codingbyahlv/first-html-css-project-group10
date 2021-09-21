@@ -9,6 +9,11 @@
 .shadow-2{/*hämtad Material Design box shadows*/
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
+/*
+.content-container h2{
+    margin-left: 30px;
+}*/
+
 
 /*page1 - section - landing-image*/ 
 .landing-container{
@@ -33,9 +38,10 @@
 }
 .landing-overlay-text-wrapper{
     min-height: 40%;
-    padding: 25px;
+    padding: 25px 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.37);
     letter-spacing: 0.1em;
 }
@@ -45,12 +51,11 @@
     text-transform: uppercase;
 }
 .landing-overlay-text-wrapper button{
-    width: 40%;
     margin-top: 50px;
-    margin-left: 60%;
     padding: 10px;
     background-color: transparent;
     border: 1px solid white;
+    border-radius: 3px;
     color: white;
     font-size: 1em;
     transition: 0.5s;
@@ -60,12 +65,15 @@
 }
 @media screen and (min-width: 800px){
     .landing-overlay-text-wrapper{
+        justify-content: space-around;
         padding: 70px;
     }
     .landing-overlay-text-wrapper h2{
         font-size: 70px;
     }
     .landing-overlay-text-wrapper button{
+        width: 40%;
+        margin-left: 60%;
         font-size: 1.2em;
     }
 }
@@ -149,28 +157,25 @@
 .text-img{/*BYT NAMN*/
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    margin: 0 30px;
 }    
-@keyframes hey{
+@keyframes welcomeSlider{
     0% {left: 0;}
 
-    20% {left: 0;}
+    25% {left: -100%;}
 
-    40% {left: -100%;} 
+    50% {left: -200%;} 
  
-    60% {left: -200%;}
-
-    80% {left: -300%;}  
+    75% {left: -300%;}
 
     100% {left: -400%;}
-}  
+} 
 .welcome-slider{
+    margin-top: 10px;
     overflow: hidden;    
 }
 .welcome-slider figure img{
     width: 20%;
-    float: left;
 }
 .welcome-slider figure{
     position: relative;
@@ -179,9 +184,19 @@
     left: 0;
     text-align: left;
     font-size: 0;
-    animation-name: hey;
+    animation-name: welcomeSlider;
     animation-duration: 25s;
     animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+@media screen and (min-width: 800px){
+    .text-img{
+        justify-content: space-between;
+        margin: 0;
+    }
+    .welcome-slider{
+        margin-top: 0;
+    }
 }
 
 /*page1 - section - news*/
@@ -194,7 +209,7 @@
     position: relative;
     display: flex;
     min-width: 260px;
-    margin-top: 5px;
+    margin: 5px 30px;
 }
 .news-card-container-image{
     display: block;
@@ -206,64 +221,126 @@
 .middle-header{
     opacity: 1;
     position: absolute;
-        top: 25%;
-        left: 25%;
-    width: 50%;
-    height: 50%;
+        top: 0%;
+        left: 0%;
+    width: 100%;
+    height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color:rgba(0,0,0,0.2);
     font-size:2em;  
 }
 .middle-header h2{
     color: white;
     text-transform: none;
-
+    border: none;
 }
-.middle-overlay {
-    position: absolute;
-        top: 15%;
-        left: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-    height: 70%;
+.middle-header p{
+    color: white;
+    font-size: 0.8em;
+}
+.middle-header button{
+    margin-top: 20px;
     padding: 10px;
-    transition: 0.5s;
-    opacity: 0;
-} 
-.middle-overlay i{
-    font-size: 5em;
-}
-.middle-overlay p{
-    margin-top: 20px;
-    text-align: center;
-}
-.middle-overlay button{
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: black;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 3px;
     color: white;
     font-size: 16px;
-    border: 1px solid black;
     transition: 0.5s;
 }
-.middle-overlay a{
-    text-decoration: none;
+.middle-header button:hover{
+    background-color:rgba(109, 191, 194, 0.493);
 }
-.middle-overlay button:hover{
-    transform:scale(1.05)
+.middle-overlay{
+     display: none;
 }
-.news-card-container:hover .news-card-container-image{
-    opacity: 0.4;
+.rest-container{
+    position: relative;
+    display: flex;
+    min-width: 260px;
+    margin: 5px 30px;
 }
-.news-card-container:hover .middle-overlay {
+.rest-overlay{
+    position: absolute;
+        top: 0;
+        left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: 0.5s;
     opacity: 1;
 }
-.news-card-container:hover .middle-header{
-    display: none;
+.rest-overlay p{
+    width: 80%;
+    margin-top: 30%;
+    margin-right: 5%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 3px;
+    color:rgba(109, 191, 194);
+    font-size: 1.3em;
+    text-align: center;
+    transform:rotate(20deg);
+}
+@media screen and (min-width: 800px) {
+    .middle-header p{
+        display: none;
+    }
+    .middle-header button{
+        display: none;
+    }
+    .middle-overlay {
+        position: absolute;
+            top: 15%;
+            left: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        height: 70%;
+        padding: 10px;
+        transition: 0.5s;
+        opacity: 0;
+    } 
+    .middle-overlay i{
+        font-size: 5em;
+    }
+    .middle-overlay p{
+        margin-top: 20px;
+        text-align: center;
+    }
+    .middle-overlay button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 3px;
+        transition: 0.5s;
+    }
+    .middle-overlay a{
+        text-decoration: none;
+    }
+    .middle-overlay button:hover{
+        transform:scale(1.05)
+    }
+    .news-card-container:hover .news-card-container-image{
+        opacity: 0.4;
+    }
+    .news-card-container:hover .middle-overlay {
+        opacity: 1;
+    }
+    .news-card-container:hover .middle-header{
+        display: none;
+    }
 }
 
 /*section - parallax background*/
@@ -283,23 +360,16 @@
 /*page1 - section- booking*/
 .big-booking-wrapper{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
+    justify-content: center;
+    flex-wrap: wrap; 
 }
 .big-booking-text{
-    min-width: 400px;
+    margin: 5px 30px;
 }
 .big-booking-wrapper form{
     display: flex;
     flex-direction: column;  
-    margin-top: 10px;
-}
-@media screen and (min-width: 800px){
-    .big-booking-wrapper form{
-        margin-top: 0;
-    }
-
+    margin-top: 10px;  
 }
 .big-booking-container{
     
@@ -310,7 +380,59 @@
 .booking-form-calendar{
     display: none;
 }
+.big-booking-choice{
+    display: flex;
+    flex-direction: column; 
+}
+.big-booking-choice h3{
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-top: 20px;
+    background-color:rgba(109, 191, 194, 0.575);
+    color: white;
+}
+.big-booking-choice select{
+    margin: 2px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    color: teal;
+}
+.big-booking-choice select:last-child{
+    margin-bottom: 20px;
+}
+.big-booking-choice select:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
+}
+.big-booking-wrapper button{
+    width: 100%;
+    padding: 10px;
+    background-color:rgba(109, 191, 194);
+    border: 0;
+    color:white;
+    font-weight:bolder;
+    text-transform: uppercase; 
+    transition: 0.5s;
+}
+.big-booking-wrapper button:hover{
+    background-color: rgba(0, 0, 0, 0.37);
+}
+.big-booking-wrapper button:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
+}
 @media screen and (min-width: 800px){
+    .big-booking-wrapper{
+        justify-content: space-between;
+    }
+    .big-booking-text{
+        margin: 0;
+    }
+    .big-booking-wrapper form{
+        margin-top: 0;
+    }
     .booking-form-calendar{
         display: flex;
         flex-direction: column;
@@ -332,50 +454,11 @@
         font-size: 8em;
         color: white;
     }
+    .big-booking-choice select{
+        margin: 5px;
+        padding: 10px;
+    }
 }
-.big-booking-choice{
-    display: flex;
-    flex-direction: column; 
-}
-.big-booking-choice h3{
-    margin: 0;
-    margin-bottom: 15px;
-    padding: 10px;
-    padding-top: 20px;
-    background-color:rgba(109, 191, 194, 0.575);
-    color: white;
-}
-.big-booking-choice select{
-    margin: 5px;
-    padding: 10px;
-    border: 0;
-    border-radius: 5px;
-    color: teal;
-}
-.big-booking-choice select:last-child{
-    margin-bottom: 20px;
-}
-.big-booking-choice select:focus{
-    outline: none;
-    box-shadow: 0px 0px 5px teal;
-}
-.big-booking-wrapper button{
-    width: 100%;
-    padding: 10px;
-    background-color:rgba(109, 191, 194);
-    border: 0;
-    color:white;
-    font-weight:bolder;
-    text-transform: uppercase; 
-}
-.big-booking-wrapper button:hover{
-    background-color: rgba(0, 0, 0, 0.37);
-}
-.big-booking-wrapper button:focus{
-    outline: none;
-    box-shadow: 0px 0px 5px teal;
-}
-
 
 /*page1 - section - reviews*/
 .background-1{
@@ -388,25 +471,22 @@
     justify-content: center;
     align-items: center;
 }
-@media screen and (min-width: 800px){
-    .background-1{
-        background-attachment: fixed;
-    }
-}
 .review-card-wrapper{
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  
 }
 .review-card{
+    width: 20%;
     min-height: 350px;
     min-width: 260px;
-    margin-top: 5px;
+    margin: 20px 50px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: white;
+    border-radius: 3px;
 }
 .review-card i{
     justify-self: flex-start;
@@ -430,4 +510,11 @@
     text-align: right;
     font-style: italic;
 }
-
+@media screen and (min-width: 800px) {
+    .background-1{
+        background-attachment: fixed;
+    }
+    .review-card{
+        margin: 10px 0;
+    }
+}
