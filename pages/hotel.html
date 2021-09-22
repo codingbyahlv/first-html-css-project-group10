@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TITEL</title><!--Lägg in titel-->
-        <meta name="description" content="BESKRIVNING"><!--Lägg in beskrivning-->
+        <title>[Företagsnamn] Hotell & Spa | Hotell</title>
+        <meta name="description" content="En beskrivning av sidan"><!--Lägg in beskrivning-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/hotel.css">
-        <link rel="icon" href="/media/img/logo.png">
+        <link rel="icon" href="../media/img/logo.png">
         <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script><!--länk till FontAwesome-->
         <!--NEDAN LÄNKNING HOTELSIDANS FONT-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,37 +21,51 @@
         <script src=""></script><!--kod för ev. javascript som ska komma före-->
     </head>
 
-<body>
-    <header class="header-container">
-        <a href="../index.html" class="logo-container">
-            <img src="../media/img/p0-logo.png" alt="Company logotype" class="logo">
-            <div class="company-name">
-                <h1>[Företagsnamn]</h1>  
-                <h1>Hotell & Spa</h1> 
-             </div>
-        </a>
-        <nav class="navbar">
-            <ul>
-                <li><a href="../index.html">Hem</a></li>
-                <li><a href="spa.html">Spa</a></li>
-                <li><a href="hotel.html">Hotell</a></li>
-                <li><a href="restaurant.html">Restaurang</a></li>
-                <li><a href="#contact-section">Kontakt</a></li> 
-            </ul>
-        </nav>
-    </header>
-
-    <!--tooltip - contact-->
-    <div class="tooltip-container">
-        <i class="far fa-comment"></i>
-        <form onsubmit="onSubmit()">
-            <h4>Hej!</h4> 
-            <p>Vad kan vi hjälpa dig med?</p>
-            <input type="text" placeholder="E-post" required/>
-            <textarea placeholder="Skriv ditt meddelande här" required></textarea>
-            <button type="submit">Skicka</button>
-        </form>
-    </div>
+    <body>
+        <header class="header-container">
+            <a href="index.html" class="logo-container">
+                <img src="../media/img/p0-logo.png" alt="Company logotype" class="logo">
+                <div class="company-name">
+                    <h1>[Företagsnamn]</h1>  
+                    <h1>Hotell & Spa</h1> 
+                 </div>
+            </a>
+            <!--navigation desktop-->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="../index.html">Hem</a></li>
+                    <li><a href="../index.html#welcome-section">Om oss</a></li>
+                    <li><a href="hotel.html">Hotell</a></li>
+                    <li><a href="spa.html">Spa</a></li>                    
+                    <li><a href="#contact-section">Kontakt</a></li>          
+                </ul>
+            </nav>
+            <!--navigation mobile-button-->
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
+        </header>
+        <!--navigation mobile-->
+        <div class="mobile-menu">      
+            <nav class="mobile-navbar">               
+                <a class="mobile-link" href="../index.html">Hem</a>
+                <a class="mobile-link" href="../index.html#welcome-section">Om oss</a>
+                <a class="mobile-link" href="hotel.html">Hotell</a>
+                <a class="mobile-link" href="spa.html">Spa</a>                   
+                <a class="mobile-link" href="#contact-section">Kontakt</a>                       
+            </nav>
+        </div>
+        <!--tooltip - contact-->
+        <div class="tooltip-container">
+            <i class="far fa-comment"></i>
+            <form onsubmit="onSubmit()">
+                <h4>Hej!</h4> 
+                <p>Vad kan vi hjälpa dig med?</p>
+                <input type="text" placeholder="E-post" required/>
+                <textarea placeholder="Skriv ditt meddelande här" required></textarea>
+                <button type="submit">Skicka</button>
+            </form>
+        </div>
 
     <!--section - landing image-->   
     <section id="landing-image" class="landing-container">
@@ -268,8 +282,8 @@
     </main>
 
     <footer>
-        <section id="contact-section" class="footer-wrapper content-container col-8">
-            <div class="col-6">
+        <section id="contact-section" class="footer-wrapper">
+            <div class="col-3">
                 <form class="newsletter-wrapper">
                     <h2>Nyhetsbrev</h2>
                     <p>Ta del av erbjudanden och nyheter före alla andra</p>
@@ -283,16 +297,16 @@
                         <a href="#"><i class="fab fa-facebook"></i> Facebook </a></p>
                 </div>
             </div>
-            <div class="contact-wrapper col-6">
+            <div class="contact-wrapper col-5">
                 <h2 class="col-12">Kontakt</h2>
                 <div class="contact col-6">
                     <div class="mail-us">
                         <h3><a href="mailto:exempel@epost.se">Maila oss!</a></h3>
-                        <p>exempel@epost.se</p>
+                        <p><i class="fa fa-envelope"></i> exempel@epost.se</p>
                     </div>
                     <div class="call-us">
                         <h3><a href="tel:+46700112233">Ring oss!</a></h3>
-                        <p>+46700112233</p>
+                        <p><i class="fa fa-phone"></i> +46700112233</p>
                     </div>
                 </div>
                 <div class="adress col-6">
