@@ -97,12 +97,12 @@ transform: scale(1.5);
       height: 400px;
      border: 1px solid black;
      margin-left: 300px;
-     background-image: url(../img/1410x591-elite-hotel-palace-spa-pool.jpeg);
+     background-image: url(../media/img/1410x591-elite-hotel-palace-spa-pool.jpeg);
    }
 
    .spa-container:hover .imagetest {
     display: flex;
-    background-image: url(../img/spasida9.jpeg);
+    background-image: url(../media/img/spasida9.jpeg);
     background-size: 600px;
 }
 
