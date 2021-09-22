@@ -1,5 +1,70 @@
 /* GEMENSAM STYLING FÖR HELA HOTELLSIDAN */
 
+.landing-container{
+    width: 100%;
+    height: 60vh;
+}
+.landing-image{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+.landing-overlay{
+    width: 100%;
+    height: 60vh;
+    position: absolute;
+        top: 0;
+        left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing-overlay-text-wrapper{
+    min-height: 40%;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.37);
+    letter-spacing: 0.1em;
+}
+.landing-overlay-text-wrapper h3{
+    color: white;
+    text-transform: uppercase;
+}
+@media screen and (min-width: 800px){
+    .landing-overlay-text-wrapper{
+        justify-content: space-around;
+        padding: 70px;
+    }
+    .landing-overlay-text-wrapper h3{
+        font-size: 40px;
+    }
+}
+
+/* SUB HEADER */
+
+#sub-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background:rgba(109, 191, 194, 0.671);
+}
+
+#sub-header-container a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#sub-header-container a:hover {
+    color: rgba(109, 191, 194, 0.9);
+    text-decoration: none;
+}
+
 .title-container h2 {
     margin: 0px;
     color: rgba(109, 191, 194, 0.671);
