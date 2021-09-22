@@ -1,0 +1,118 @@
+
+.photo-heading {
+
+  margin-top: -100px;
+}
+.photo-heading img {
+  width: 100%;
+ border-bottom: 30px solid turquoise;
+}
+
+/* section 1 */
+
+.main-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+    
+}
+.text-container {
+width: 35%;
+margin-top: 100px;
+}
+
+.image-container {
+  
+ 
+}
+.image-container img {
+  width: 45vw;
+  height: 50vh;
+  box-shadow: 0 4px 10px 0 rgb(153, 149, 149), 0 6px 20px 0 rgba(53, 50, 50, 0.19);
+}
+/*  section 2*/
+
+.photo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+ margin: 100px auto 100px 40px;
+  padding: 5px;
+  position: relative;
+  height: 500px;
+  box-shadow: 0 4px 10px 0 rgb(153, 149, 149), 0 6px 20px 0 rgba(53, 50, 50, 0.19);
+  transition:1s; 
+}
+
+.photo-container img {
+height: 35vh;
+width: 300px;
+margin-top: 20px;
+}
+
+
+  .column:hover {
+transform: scale(1.5);
+  }
+  
+  .image {
+  filter: brightness(100%);
+    transition: .5s ease;
+   
+  }
+  
+  
+
+
+
+
+
+   /* behandlingar section3 */
+   .spa-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .spacontainer {
+    margin-left: 550px;
+   display:flex;
+   flex-wrap: wrap;
+  }
+.treatment-container {
+ margin: 30px;
+ align-items: center;
+}
+
+.test {
+  margin: 20px 20px 30px 20px;
+  
+}
+  
+   .imagetest {
+        width: 800px;
+      height: 400px;
+     border: 1px solid black;
+     margin-left: 300px;
+     background-image: url(../img/1410x591-elite-hotel-palace-spa-pool.jpeg);
+   }
+
+   .spa-container:hover .imagetest {
+    display: flex;
+    background-image: url(../img/spasida9.jpeg);
+    background-size: 600px;
+}
+
+ 
+   
+
+
+
+
+
+  
+  
+ /*

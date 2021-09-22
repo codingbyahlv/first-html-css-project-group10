@@ -1,21 +1,51 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TITEL</title><!--Lägg in titel-->
+        <title>[Företagsnamn] Hotell & Spa | Välkommen</title><!--Byt ut sista på titeln för varje sida-->
         <meta name="description" content="BESKRIVNING"><!--Lägg in beskrivning-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/spa.css">
+        <link rel="icon" href="media/img/p0-logo.png">
         <script src="https://kit.fontawesome.com/38e66b1324.js" crossorigin="anonymous"></script><!--länk till FontAwesome-->
-        <script src=""></script><!--kod för ev. javascript som ska komma före-->
+        
+        <!--
+        
+         OM NÅGON VILL SPECIALLÄNKA FONTER LÄGGS DE HÄR
+        
+        
+        -->
+        
+        <script src=""></script><!--kod för ev. javascript som ska komma före-->    
     </head>
+
     <body>
-        <header>
-            [ HÄR SKA EN HEADER VARA ]
+        <header class="header-container">
+            <a href="index.html" class="logo-container">
+                <img src="media/img/p0-logo.png" alt="Company logotype" class="logo">
+                <div class="company-name">
+                    <h1>[Företagsnamn]</h1>  
+                    <h1>Hotell & Spa</h1> 
+                 </div>
+            </a>
+            <!--navigation mobile-->
+            <!--LÄGG IN MOBILNAVIGERING-->
+
+            <!--navigation desktop-->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="pages/hotel.html">Hotell</a></li>
+                    <li><a href="pages/spa.html">Spa</a></li>                   
+                    <li><a href="pages/restaurant.html">Restaurang</a></li>   
+                    <li><a href="#contact-section">Kontakt</a></li>          
+                </ul>
+            </nav>
         </header>
 
-        <!-- nedan kod är för snabbmeddelandefunktionen -->
+        <!--tooltip - contact-->
         <div class="tooltip-container">
             <i class="far fa-comment"></i>
             <form onsubmit="onSubmit()">
@@ -28,45 +58,123 @@
         </div>
 
 
-        <main>
-        <!-- start innehåll -->
-
-           <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                </article> 
-                <article class="">
-                    <h3>Ev underrubrik (article)</h3>
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-
-                    <h4>Under underrubrik (div)</h4>
-                    <p>Det här är en artikel med innehåll. 
-                    Sätt ytterligare klass på för att styra artikelns specifika innehåll.</p>
-                    <p>Ännu ett stycke i samma artikel</p>
-                </article>
-            </section>
-
-            <section id="" class="content-container col-8">
-                <h2>Sektionsrubrik (section)</h2>
-                <h3>Ev underrubrik (article)</h3>
-                <p>Det här är en sektion med innehåll. 
-                Sätt ytterligare klass för att styra sektionens specifika innehåll.</p>
-            </section>    
-            
-            
-        <!-- slut innehåll -->
-        </main>
-      
-        <footer>
-            [ HÄR SKA EN FOOTER VARA ]
-        </footer>
+        <!--spa del heading-->
+        <div class="photo-heading">
+          <img src="img/spasida4.jpeg" alt="spa">
+        </div>
         
-        <script src="script/main.js"></script><!--kod för javascript som ska komma efter-->
-    </body>
-</html>>
+        <!--section1-->
+        <section id="main-container" class="main-container col-12">
+             <h2>Vårat spa</h2>
+            <div class="main-container">
+               
+          <article class="text-container">
+              <h3>Du förtjanar det basta</h3>
+              <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum sunt voluptatum deserunt modi, quod optio exercitationem a ipsum! Vero tenetur corrupti recusandae dolores, aperiam repudiandae praesentium ad perferendis doloremque libero. cing elit. Exercitationem veritatis dolor numquam enim soluta velit ad, esse cupiditate aperiam.</p>
+          </article> 
+
+          <article class="image-container">
+              <img src="img/spasida4.jpeg" alt="spa" >
+          </article>
+        </div>
+      </section>
+       
+
+
+        <!--section2-->
+
+        <section id="photo-container" class="photo-container col-12">
+          <div class="photo-container">
+            <article class="column">
+             <div class="container">
+   <img src="img/spasida4.jpeg" alt="6" class="image"> 
+  <div class="middle">
+      <p></p>
+  </div>
+
+
+ 
+  </div>
+  
+          </article> 
+          <article class="column">
+              <div class=" container">
+                <img src="img/spasida7.jpeg" alt="9" class="image"> 
+  
+  </div> 
+</article>
+
+          <article class="column">
+              <div class="container">
+   <img src="img/spasida8.jpeg" alt="10" class="image"> 
+
+          </article>
+        </div>
+      </section>
+
+<!--section3-->
+<h2>våra behandlingar</h2>
+<section id="spa-container" class="spa-container col-12"> 
+   
+  <div class="spacontainer">
+    <h3 class="test">kropp</h3>
+    <h3 class="test">ansikte</h3>
+    <h3 class="test">naglar</h3>
+   
+    </div>
+    <div class="imagetest">hej</div>
+</section>
+ 
+
+
+<!--footer-->
+<section id="contact-section" class="footer-wrapper content-container col-8">
+  <div class="col-6">
+      <form class="newsletter-wrapper">
+          <h2>Nyhetsbrev</h2>
+          <p>Ta del av erbjudanden och nyheter före alla andra</p>
+          <input type="text" placeholder="Fyll i din e-postadress" required/>
+          <button type="submit">Anmäl mig!</button>
+      </form>
+      <div class="social-media">
+          <h2>Sociala medier</h2>
+          <p>@[Företagsnamn]HotelSpa</p>
+          <p><a href="#"><i class="fab fa-instagram"></i> Instagram </a> | 
+              <a href="#"><i class="fab fa-facebook"></i> Facebook </a></p>
+      </div>
+  </div>
+  <div class="contact-wrapper col-6">
+      <h2 class="col-12">Kontakt</h2>
+      <div class="contact col-6">
+          <div class="mail-us">
+              <h3><a href="mailto:exempel@epost.se">Maila oss!</a></h3>
+              <p><i class="fa fa-envelope"></i> exempel@epost.se</p>
+          </div>
+          <div class="call-us">
+              <h3><a href="tel:+46700112233">Ring oss!</a></h3>
+              <p><i class="fa fa-phone"></i> +46700112233</p>
+          </div>
+      </div>
+      <div class="adress col-6">
+          <h3>Besök oss!</h3>  
+          <p>Xxxxxxgatan 25</p>
+          <p>000 00 Xxxxstaden</p>
+          <div class="map">
+              <img src="https://via.placeholder.com/300x300">
+          </div>
+      </div>
+  </div>
+</section>
+<p class="copyright col-12">Copyright <i class="far fa-copyright"></i> [Företagsnamn] Hotell & Spa 2021</p>
+</footer>
+
+<script src="script/main.js"></script><!--kod för javascript som ska komma efter-->
+</body>
+</html>
+  
+
+
+
+
+
+
