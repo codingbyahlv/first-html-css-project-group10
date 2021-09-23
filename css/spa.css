@@ -107,49 +107,99 @@ transform: scale(1.2);
   
 
 
-
-
-
    /* behandlingar section3 */
-   .spa-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .spacontainer {
-    margin-left: 550px;
-   display:flex;
-   flex-wrap: wrap;
-  }
-.treatment-container {
- margin: 30px;
- align-items: center;
-}
-
-.test {
-  margin: 20px 20px 30px 20px;
   
-}
-  
-   .imagetest {
-        width: 800px;
-      height: 400px;
-     border: 1px solid black;
-     margin-left: 300px;
-     background-image: url(../media/img/1410x591-elite-hotel-palace-spa-pool.jpeg);
-   }
-
-   .spa-container:hover .imagetest {
+  .scroll
+  {
+    
     display: flex;
-    background-image: url(../media/img/spasida9.jpeg);
-    background-size: 600px;
-}
+    flex-wrap: wrap;
+    scroll-behavior: smooth; 
+    overflow: scroll;
+    height: 600px;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
 
+  .scroll::-webkit-scrollbar {
+    display: none; 
+  }
+
+ .treatment-container {
+  
+  }
+ /* meny del */
+.menu-container {
+display: flex;
+flex-wrap: wrap;
+  padding: 50px;
+  justify-content: space-around;
  
-   
+}
+
+.treatment-text-container {
+  width: 40%;
+  flex-direction: row;
+  align-content: center;
+  
+}
+.treatment-text-container h3 {
+  text-align: center;
+}
+.treatment-container img {
+margin-left: 380px;
+}
+.right-side ul{
+ margin-right: 30px;
+  margin-top: 100px;
+  text-align: center;
+}
+.right-side li {
+  list-style: none;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.right-side li a {
+  
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  border-radius: 50%;
+  padding: 10px;
+
+  
+}
+/* booking */
+
+.offer-container {
+  display: flex;
+  align-content: center;
+text-align: center;
+padding: 10px;
+flex-direction: column;
+}
+
+.treatment-book-container {
+ margin: 20px;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  
+}
 
 
-
+  #section1 {
+    height: 600px;
+  }
+  #section2 {
+    height: 600px;
+  }
+  #section3 {
+    height: 600px;
+  }
+  #section4 {
+    height: 600px;
+  }
 
 
   
