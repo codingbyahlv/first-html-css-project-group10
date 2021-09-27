@@ -9,11 +9,6 @@
 .shadow-2{/*hämtad Material Design box shadows*/
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
-/*
-.content-container h2{
-    margin-left: 30px;
-}*/
-
 
 /*page1 - section - landing-image*/ 
 .landing-container{
@@ -475,6 +470,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;  
+    padding: 30px 0;
 }
 .review-card{
     width: 20%;

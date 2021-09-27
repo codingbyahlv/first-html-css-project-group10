@@ -225,6 +225,10 @@ body{
     display: block;
     border: 1px solid white;
 }
+.tooltip-container input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
+}
 .tooltip-container textarea{  
     width: 200px;
     height: 70px;
@@ -232,11 +236,15 @@ body{
     display: block;
     border: 1px solid white;
 }
+.tooltip-container textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px teal;
+}
 .tooltip-container button{
     margin-top: 10px;
     padding: 5px;
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 5px;
     color: white;
 }
@@ -262,7 +270,6 @@ body{
 /*footer*/
 footer{
     background-color: rgba(40, 56, 60, 0.87);
-    padding-top: 30px;
 }
 .footer-wrapper{
     display: flex;   
@@ -337,7 +344,11 @@ footer{
 .adress{
     margin-bottom: 30px;
 }
+.map{
+    width: 100%; 
+}
 .map img{
+    width: 100%;
     object-fit: contain;
 }
 .copyright{
