@@ -90,65 +90,66 @@
             <h2 class="col-12">Hotellet</h2>
 
             <div class="hotel-info-wrapper">
-                <div class="hotel-image-info">
-                    <img src="../media/img/hotell och spa.jpeg">
+                <div class="hotel-text-info-wrapper">
+                    <div class="hotel-image-info col-7">
+                        <img src="../media/img/hotell och spa.jpeg">
+                    </div>
+                    <div class="hotel-facilities col-4">
+                        <h3 class="hotel-text-info-extra">Faciliteter</h3>
+                        <div class="hotel-info-icons">
+                            <div class="wifi-icon-box hotel-icons">
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                Wifi
+                                <p class="wifi-icon-info">På hotellet finns naturligtvis Wifi</p>
+                            </div>
+                            <div class="wheelchair-icon-box hotel-icons">
+                                <i class="fa fa-wheelchair" aria-hidden="true"></i>
+                                Rullstol
+                                <p class="wheelchair-icon-info">Vårt hotell är handikappanpassat</p>
+                            </div>
+                            <div class="heart-icon-box hotel-icons">
+                                <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                                Hjärtstartare
+                                <p class="heart-icon-info">Hotellet har hjärtstartare</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="hotel-text-info-wrapper">
                     <div class="hotel-text-info">
                         <p>Det här är en artikel med innehåll.
                             Sätt ytterligare klass på för att styra artikelns specifika innehåll. 
                             Sätt ytterligare klass på för att styra artikelns specifika innehåll.
                         </p>
-                    </div>
-                    <div class="hotel-text-info-extra">
-                        <p>När du bor på vårt hotell får du tillgång till allt det här </p>
-                    </div>
-
-                    <div class="hotel-info-icons">
-                        <div class="wifi-icon-box">
-                            <i class="fa fa-wifi" aria-hidden="true"></i>
-                            Wifi
-                            <p class="wifi-icon-info">På hotellet finns naturligtvis Wifi</p>
-                        </div>
-                        <div class="wheelchair-icon-box">
-                            <i class="fa fa-wheelchair" aria-hidden="true"></i>
-                            Rullstol
-                            <p class="wheelchair-icon-info">Vårt hotell är handikappanpassat</p>
-                        </div>
-                        <div class="heart-icon-box">
-                            <i class="fa fa-heartbeat" aria-hidden="true"></i>
-                            Hjärtstartare
-                            <p class="heart-icon-info">Hotellet har hjärtstartare</p>
-                        </div>
-                    </div>
-                </div>
+                    </div>   
             </div>
         </section>
 
-        <section id="package-container" class="content-container col-8">
+        <div class="anchor" id="package-container"></div>
+        <section class="content-container col-8">
             <h2 class="col-12">Våra Paket</h2>
 
             <div id="package-wrapper">
-                <div id="bronze-package" class="package-box col-13">
-                    <h1>Bronze</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+
+                <div class="package-box col-3">
+                    <h3 class="bronze">Bronze</h3>
+                    <p>Lorem ipsum dolor sit amet consec tetur adipisicing elit. 
                         Temporibus, nihil magnam culpa obcaecati dolores odit ipsum
                         ullam porro explicabo molestias vel mollitia reiciendis, 
                         voluptatem ea optio totam, quo nobis quasi.</p>
                 </div>
 
-                <div id="silver-package"class="package-box col-13">
-                    <h1>Silver</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <div class="package-box col-3">
+                    <h3 class="silver" >Silver</h3>
+                    <p>Lorem ipsum dolor sit amet consec tetur adipisicing elit. 
                         Temporibus, nihil magnam culpa obcaecati dolores odit ipsum
                         ullam porro explicabo molestias vel mollitia reiciendis, 
                         voluptatem ea optio totam, quo nobis quasi.</p>
                 </div>
 
-                <div id="gold-package" class="package-box col-13">
-                    <h1>Gold</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                <div class="package-box col-3">
+                    <h3 class="gold" >Gold</h3>
+                    <p>Lorem ipsum dolor sit amet consec tetur adipisicing elit. 
                         Temporibus, nihil magnam culpa obcaecati dolores odit ipsum
                         ullam porro explicabo molestias vel mollitia reiciendis, 
                         voluptatem ea optio totam, quo nobis quasi.</p>
@@ -156,6 +157,7 @@
             </div>
         </section>
         
+        <div class="anchor" id="#"></div>
         <section id="room-container" class="content-container col-8">
             <h2 class="col-12">Våra Rum</h2>
             <h3>husdha</h3>
@@ -198,13 +200,13 @@
                         <h3>Jag vill boka</h3>
                         <form>
                             <input type="radio" checked="checked" name="radio" value="bronze">
-                            <label id="bronze-package" class="checkboxes">Bronspaketet</label><br>
+                            <label class="bronze checkboxes">Bronspaketet</label><br>
 
                             <input type="radio" name="radio" value="silver">
-                            <label id="silver-package" class="checkboxes">Silverpaketet</label><br>
+                            <label class="silver checkboxes">Silverpaketet</label><br>
 
                             <input type="radio" name="radio" value="gold">
-                            <label id="gold-package" class="checkboxes">Guldpaketet</label><br><br>
+                            <label class="gold checkboxes">Guldpaketet</label><br><br>
 
                             <input class="submit-button" type="submit" value="Submit">
                         </form> 
@@ -236,14 +238,14 @@
                             <h3>Jag vill boka</h3>
                             <form>
                                 <input type="radio" checked="checked" name="radio" value="bronze">
-                                <label id="bronze-package" class="checkboxes">Bronspaketet</label><br>
-
+                                <label class="bronze checkboxes">Bronspaketet</label><br>
+    
                                 <input type="radio" name="radio" value="silver">
-                                <label id="silver-package" class="checkboxes">Silverpaketet</label><br>
-
+                                <label class="silver checkboxes">Silverpaketet</label><br>
+    
                                 <input type="radio" name="radio" value="gold">
-                                <label id="gold-package" class="checkboxes">Guldpaketet</label><br><br>
-
+                                <label class="gold checkboxes">Guldpaketet</label><br><br>
+    
                                 <input class="submit-button" type="submit" value="Submit">
                             </form> 
                         </div>
@@ -252,10 +254,9 @@
             </div>
         </section>
 
+        <div class="anchor" id="#"></div>
         <section id="activity-container" class="content-container col-8">
-            <div class="title-container">
-                <h2>Våra Aktiviteter</h2>
-            </div>
+            <h2>Våra Aktiviteter</h2>
             <h3>husdha</h3>
             <p>Lorem ipsum dolor, sit amet consectetur 
                 adipisicing elit. Provident fugit dolore at 
