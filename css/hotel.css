@@ -288,11 +288,11 @@
 .room-text-container {
     border: 0px;
 }
-
+/*
 .room-form-wrapper p {
     font-size: 18px;
 }
-
+*/
 .room-form-wrapper h3 {
     border-bottom: 5px dotted rgba(109, 191, 194, 0.671);
     margin-right: 10px;
