@@ -22,14 +22,17 @@
 }
 .landing-overlay-text-wrapper{
     min-height: 40%;
+    margin-top: 50px;
     padding: 25px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.3);
     letter-spacing: 0.1em;
+    color: white;
 }
 .landing-overlay-text-wrapper h3{
+    text-align: center;
     color: white;
     text-transform: uppercase;
 }
@@ -40,6 +43,11 @@
     }
     .landing-overlay-text-wrapper h3{
         font-size: 40px;
+    }
+
+    .landing-overlay-text-wrapper h4{
+        font-size: 20px;
+        color:white;
     }
 }
 
@@ -74,73 +82,107 @@
 
 /* HOTEL SECTION */
 
-#hotel-section {
-    width: 100%;
-    height: 100vh;
-}
-
-#hotel-container img {
-    width: 100%;
-    object-fit: fill;
-    position: center;
-}
-
-#hotel-info-container {
-    margin-bottom: 50px;
-    border: 0px;
+.hotel-info-wrapper {
     display: flex;
-            
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 50px 50px 10px 50px;
+    margin-bottom: 50px;
+    border: 0px;  
     background-color: white;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .hotel-image-info {
-    /*width: 60%;*/
     background-color: white;
     border: 0;
 }
 
 .hotel-image-info img {
     width: 100%;
-    height: 100%;
-    object-fit: fill;
 }
 
-.hotel-text-info {
-/*width: 40%;*/
-min-height: 200px;
-overflow: hidden;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 24px;
-padding: 10px;
-}
-
-/* PACKAGE SECTION */
-
-#package-container {
+.hotel-text-info-wrapper {
     display: flex;
     flex-direction: column;
 }
 
+.hotel-text-info {
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.hotel-text-info-extra {
+    font-size: 24px;
+    margin: 0 auto;
+}
+
+.hotel-info-icons {
+    display: flex;
+    justify-content: space-around;
+    border-top: 5px dotted rgba(109, 191, 194, 0.671);
+    padding-top: 20px;
+}
+
+.wifi-icon-info {
+    display: none;
+    transition: 0.8s;
+    position:absolute;
+    z-index: 2;
+}
+
+.wifi-icon-box:hover p {
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.wheelchair-icon-info {
+    display: none;
+    transition: 0.8s;
+    position:absolute;
+    z-index: 2;
+}
+
+.wheelchair-icon-box:hover p {
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.heart-icon-info {
+    display: none;
+    transition: 0.8s;
+    position:absolute;
+    z-index: 2;
+}
+
+.heart-icon-box:hover p {
+    display: block;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+/* PACKAGE SECTION */
+
 #package-wrapper {
     display: flex;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
     margin-top: 10px;
     padding: 10px;
 }
 
 .package-box {
     padding: 10px;
-    /*width: 30%;*/
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .package-box h1 {
     text-align: center;
-    margin-bottom: 10px;
-    background-color:  #FDFEFE;
+    background-color: #FDFEFE;
 }
 
 #bronze-package {
@@ -164,14 +206,16 @@ padding: 10px;
 
 #room-wrapper {
     display: flex;
-            flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .room-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-        /*width: 50%;*/
     padding: 10px;
     border: none;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -179,7 +223,6 @@ padding: 10px;
 
 .room-image-box {
     position: relative;
-    width: 400px;
 }
 
 .room-image-box img {
@@ -209,20 +252,31 @@ padding: 10px;
 
 .room-overlay-box p {
     color: #ffffff; 
+    margin: 20px;
+    text-align: center;
 }
 
 .room-text-container {
     border: 0px;
 }
 
-.room-text-container p {
+.room-form-wrapper p {
     font-size: 18px;
 }
 
-.room-text-container h3 {
+.room-form-wrapper h3 {
     border-bottom: 5px dotted rgba(109, 191, 194, 0.671);
     margin-right: 10px;
     color:rgba(109, 191, 194, 0.671)
+}
+
+.room-info-text {
+    
+}
+
+.room-info-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .checkboxes {
@@ -309,8 +363,8 @@ padding: 10px;
     background: url('../media/img/gym.jpeg');
 }
 
-.bastu-item {
-    background: url('../media/img/bastu.jpg');
+.spa-saker-item {
+    background: url('../media/img/spa\ saker.jpeg');
 }
 
 .mat-item {
