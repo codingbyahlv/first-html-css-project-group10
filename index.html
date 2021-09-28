@@ -79,7 +79,7 @@
                 </div>
                 <article id="small-booking" class="small-booking-wrapper hide-small shadow-2">
                     <h2>Bokning</h2>                
-                    <form>
+                    <form onsubmit="searchBooking()">
                         <div class="small-booking-container">                                                                      
                                <div class="small-booking-choice">
                                     <h3>Ankomst</h3>
@@ -238,7 +238,7 @@
                         <img src="media/img/p1-hotel.jpg" alt="" class="news-card-container-image">                   
                         <div class="middle-header">
                             <h2>Hotell</h2>
-                            <p>Läs mer vad hotellet erbjuder</p>
+                            <p>Just nu på vårt hotell</p>
                             <a href="pages/hotel.html#package-container"><button>Läs mer</button></a>
                         </div>
                         <div class="middle-overlay">                       
@@ -252,7 +252,7 @@
                         <img src="media/img/p1-massage.jpg" alt="" class="news-card-container-image">                   
                         <div class="middle-header">
                             <h2>Spa</h2>
-                            <p>Erbjudanden från spa-avdelningen</p>
+                            <p>Just nu på vår spa-avdelning</p>
                             <a href="pages/spa.html#photo-container"><button>Läs mer</button></a> 
                         </div>
                         <div class="middle-overlay">                       
@@ -293,13 +293,13 @@
                         Quasi mollitia, quis sint facilis dolores commodi iusto aspernatur 
                         doloremque facere aut. Corrupti esse dolorem quidem?</p>
                 </div>        
-                <form clas="col-6">
+                <form onsubmit="searchBooking()" class="col-7">
                     <div class="big-booking-container">
-                        <div class="booking-form-calendar"> 
+                        <div class="booking-form-calendar col-3"> 
                             <h3>Kalender</h3>
                             <i class="far fa-calendar-alt"></i>
                         </div>  
-                        <div class="big-booking-choice">
+                        <div class="big-booking-choice col-3">
                             <h3>Ankomst</h3>
                             <select name="datum" size="1">
                                 <option>Välj datum</option>
@@ -356,7 +356,7 @@
                                 <option value="2022">2022</option>
                         </select>
                         </div>
-                        <div class="big-booking-choice">
+                        <div class="big-booking-choice col-3">
                             <h3>Ankomst</h3>
                             <select name="datum" size="1">
                                 <option>Välj datum</option>
@@ -413,18 +413,22 @@
                                 <option value="2022">2022</option>
                         </select>                                
                         </div>
-                        <div class="big-booking-choice">
+                        <div class="big-booking-choice col-3">
                             <h3>Paket</h3>
                             <select name="hotell" size="1">
-                                <option>Välj hotellpaket</option>
+                                <option>Hotellpaket</option>
                                 <option value="hot-1">Hotellpaket 1</option>
+                                <option value="hot-1">Hotellpaket 2</option>
+                                <option value="hot-1">Hotellpaket 3</option>
                             </select>  
                             <select name="spa" size="1">
-                                <option>Välj spapaket</option>
+                                <option>Spapaket</option>
                                 <option value="spa-1">Spapaket 1</option>
+                                <option value="spa-1">Spapaket 2</option>
+                                <option value="spa-1">Spapaket 3</option>
                             </select>  
                             <select name="restaurant" size="1">
-                                <option>Välj restaurangpaket</option>
+                                <option>Restaurangpaket</option>
                                 <option value="rest-1">Restaurangpaket 1</option>
                             </select>   
                         </div>
@@ -439,7 +443,7 @@
             <div class="anchor" id="reviews"></div>
             <div class="background-1"> 
                 <section id="reviews" class="review-card-wrapper content-container col-8"> 
-                	<div class="review-card">
+                	<div class="review-card shadow-2">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                            
                             <p class="review-text">Här står det en recension.
@@ -448,7 +452,7 @@
                             <p class="review-name">- [Namn] -</p>
                         </div>                        
                     </div>    
-                	<div class="review-card">
+                	<div class="review-card shadow-2">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                          
                             <p class="review-text">Här står det en recension. 
@@ -457,7 +461,7 @@
                             <p class="review-name">- [Namn] -</p> 
                         </div>                        
                     </div>
-                	<div class="review-card">
+                	<div class="review-card shadow-2">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                            
                             <p class="review-text">Här står det en recension. 
@@ -466,7 +470,7 @@
                             <p class="review-name">- [Namn] -</p>
                         </div>                        
                     </div>
-                    <div class="review-card">
+                    <div class="review-card shadow-2">
                         <i class="fas fa-quote-right"></i>
                         <div class="review">                            
                             <p class="review-text">Här står det en recension. 
