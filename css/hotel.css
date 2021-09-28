@@ -100,6 +100,7 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding-bottom: 30px;
 }
 
 .hotel-image-info {
@@ -109,6 +110,11 @@
 
 .hotel-image-info img {
     width: 100%;
+}
+
+.hotel-wrapper{
+    display: flex;
+    flex-direction: column;
 }
 
 .hotel-facilities{
@@ -176,12 +182,9 @@
     overflow: hidden;
     padding-top: 10px;
 }
-.test{
-    display: flex;
-    flex-direction: column;
-}
+
 @media screen and (min-width: 800px) {
-    .test{
+    .hotel-wrapper{
         flex-direction: column-reverse;
     }
 }
