@@ -174,10 +174,18 @@
 
 .hotel-text-info {
     overflow: hidden;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 24px;
-    padding: 10px;
+    padding-top: 10px;
 }
+.test{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+    .test{
+        flex-direction: column-reverse;
+    }
+}
+
 /* PACKAGE SECTION */
 
 #package-wrapper {

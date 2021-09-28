@@ -125,99 +125,142 @@ transform: scale(1.2);
   
 
 
-   /* behandlingar section3 */
-  
-  .scroll
-  {
-    
+    /* behandlingar section3 */
+ 
+  .treatment-text-container {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;/*NY centrerar boxen*/
+    /*padding: 40px;*/
+    /*margin-top: -100px;*/
+  }
+
+  .treatment-text-container img {
+   margin-bottom: 50px;
+  }
+
+  .scroll{
     display: flex;
     flex-wrap: wrap;
     scroll-behavior: smooth; 
-    overflow: scroll;
-    height: 700px;
+    /*overflow: scroll;*//*FLYTTAD TILL MEDIA*/
+    /*height: 595px;*//*FLYTTAD TILL MEDIA*/
     background-color: white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
   }
 
+  .treatment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;/*NY*/
+    /*justify-content: space-around;*/
+  }
+  .side-nav-container{
+    display: none;
+  }
+
+  /* booking */
+  .offer-container {
+    margin-top: 20px;/*NY*/
+    align-content: center;
+    text-align: center;
+    padding-bottom: 30px; /*NY*/
+  }
+  .treatment-book-container {
+    display: flex;
+    flex-wrap: wrap;/*NY*/
+    justify-content: space-between;/*NY*/
+    text-align: left;/*NY*/
+    /*align-content: center;*/
+    /*text-align: center;*/
+    /*padding: 0px;*/
+    padding-left: 10px;/*NY*/
+    /*flex-direction: column;*/
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);  
+  }
+
+  .btn-oval-color{/*NY*/
+    background-color: rgba(109, 191, 194, 0.671);
+    border: 0;
+    border-radius: 17px;
+    padding: 10px 40px;
+    color: white;
+    text-transform: uppercase;
+    align-self: flex-end;
+    margin: 0 10px 10px 0;
+  }
+  .btn-oval-color a{/*NY*/
+    text-decoration: none;
+    color: white;
+  }
+  .btn-oval-color:hover{/*NY*/
+    background-color: white;
+    border: 2px solid rgba(109, 191, 194, 0.671);
+  }
+  .btn-oval-color:hover a{/*NY*/
+    color: rgb(109, 191, 194);
+  }
+
+  /*Byter ut sektionshöjderna till nytt mått och FLYTTAR TILL MEDIA*/
+  /*Sektion 1 behöver ingwn höjd alls i nya*/
+  /*
+  .section1 {
+    height: 700px;
+  }
+  .section2 {
+    height: 500px;
+  }
+  .section3 {
+    height: 500px;
+  }
+  .section4 {
+    height: 500px;
+  }
+*/
+
+@media screen and (min-width: 800px) {
+  .scroll{
+    overflow: scroll;
+    height: 595px;
+  }
   .scroll::-webkit-scrollbar {
     display: none; 
   }
-
-.treatment-container {
- display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-}
  /* meny del */
- 
-
-.side-nav-container {
-  display: flex;
-  margin: 0px auto auto 0px;
-
-}
-.side-nav-container li {
-  margin: 20px;
-  list-style: none;
-border-radius: 50%;
-padding: 10px;
-  background-color: rgb(211, 202, 202);
-}
-
-.side-nav-container a {
-  text-decoration: none;
-  color: black;
-}
-.side-nav-container a:hover {
-  text-decoration: underline;
-}
-
-
-.treatment-text-container {
-  justify-self: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  margin-top: -100px;
-}
-.treatment-text-container img {
- margin-bottom: 50px;
-}
-
-/* booking */
-
-.offer-container {
-  align-content: center;
-text-align: center;
-}
-.treatment-book-container {
-display: flex;
-align-content: center;
-text-align: center;
-padding: 0px;
-flex-direction: column;
- margin-top: 20px;
-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  
-}
-
-
-  #section1 {
-    height: 700px;
+  .side-nav-container {
+    display: flex;
+    align-items: flex-start;/*NY*/
+    justify-content: flex-end;
+    /*margin: 0px auto auto 0px;*/
   }
-  #section2 {
-    height: 700px;
+  .side-nav-container li {
+    /*margin: 0 20px;*/
+    list-style: none;
+    /*border-radius: 50%;*/
+    border-radius: 17px;/*Byter till px för att få jämnare kanter*/
+    padding: 0 5px;/*NYa mått/
+    /*background-color: rgb(211, 202, 202);*/
+    color:rgb(109, 191, 194);
   }
-  #section3 {
-    height: 700px;
+  .side-nav-container a {
+    text-decoration: none;
+    /*color: black;*/
+    color:rgb(109, 191, 194);
   }
-  #section4 {
-    height: 700px;
+  .side-nav-container a:hover {
+    text-decoration: underline;
   }
-
-
-  
-  
- /*
+  .section2 {
+    /*height: 700px;*/
+    height: 500px;
+  }
+  .section3 {
+    height: 500px;
+  }
+  .section4 {
+    height: 500px;
+  }
+}
