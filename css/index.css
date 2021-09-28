@@ -47,16 +47,19 @@
 }
 .landing-overlay-text-wrapper button{
     margin-top: 50px;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: transparent;
-    border: 1px solid white;
-    border-radius: 3px;
+    border: 2px solid white;
+    border-radius: 17px;
     color: white;
     font-size: 1em;
     transition: 0.5s;
 }
 .landing-overlay-text-wrapper button:hover{
     background-color:rgba(109, 191, 194, 0.493);
+}
+.small-booking-wrapper{
+    visibility: hidden;
 }
 @media screen and (min-width: 800px){
     .landing-overlay-text-wrapper{
@@ -67,15 +70,10 @@
         font-size: 70px;
     }
     .landing-overlay-text-wrapper button{
-        width: 40%;
-        margin-left: 60%;
+        width: 45%;
+        margin-left: 55%;
         font-size: 1.2em;
     }
-}
-.small-booking-wrapper{
-    visibility: hidden;
-}
-@media screen and (min-width: 800px){
     .small-booking-wrapper{
         visibility: visible;
         position: absolute;
@@ -238,10 +236,10 @@
 }
 .middle-header button{
     margin-top: 20px;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: transparent;
-    border: 1px solid white;
-    border-radius: 3px;
+    border: 2px solid white;
+    border-radius: 17px;
     color: white;
     font-size: 16px;
     transition: 0.5s;
@@ -318,7 +316,7 @@
         color: white;
         font-size: 16px;
         border: 1px solid black;
-        border-radius: 3px;
+        border-radius: 17px;
         transition: 0.5s;
     }
     .middle-overlay a{
@@ -364,7 +362,7 @@
 .big-booking-wrapper form{
     display: flex;
     flex-direction: column;  
-    margin-top: 10px;  
+    margin: 0px 10px 0px 10px;
 }
 .big-booking-container{
     
@@ -406,6 +404,7 @@
     padding: 10px;
     background-color:rgba(109, 191, 194);
     border: 0;
+    border-radius: 0;
     color:white;
     font-weight:bolder;
     text-transform: uppercase; 
@@ -424,9 +423,10 @@
     }
     .big-booking-text{
         margin: 0;
+        padding-right: 10px;
     }
     .big-booking-wrapper form{
-        margin-top: 0;
+        margin: 0;
     }
     .booking-form-calendar{
         display: flex;
@@ -448,7 +448,7 @@
         padding-bottom: 20px;
         font-size: 8em;
         color: white;
-    }
+    }  
     .big-booking-choice select{
         margin: 5px;
         padding: 10px;

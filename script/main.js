@@ -7,7 +7,9 @@ const documentBody = document.body;
 function onSubmit(){
     alert("Tack för ditt meddelande. Vi återkommer så snart vi kan");
 }
-
+function searchBooking(){
+  alert("Kul att du gillar det du ser och vill göra en bokning. Tyvärr är detta endast en fiktiv sida. Men hjälp oss sälja in det till ett riktigt företag så ser vi till att du får rabatt sedan ;)");
+}
 function toggleMenu() {
     if (!menuOpen) {
       menuBtn.classList.add("open");
