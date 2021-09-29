@@ -70,20 +70,17 @@
         <img class="landing-image" src="../media/img/hotell.jpg">
         <div class="landing-overlay">
             <div class="landing-overlay-text-wrapper">
-                <h3>Hotell</h3>
-                <br>
+                <h3>Hotell</h3>            
                 <h4>Våra dörrar står alltid öppna för dig, dina nära och kära.</h4>
             </div>
         </div>
     </section>
-    <!--SLUT LANDING IMAGE-->
 
     <div id="sub-header-container">
         <a href="../index.html#big-booking">Boka rum</a>
     </div>
 
     <main>
-        <!-- start innehåll -->
         <section id="hotel-section" class="content-container col-8">
             <h2 class="col-12">Hotellet</h2>
 
@@ -178,17 +175,20 @@
                     <div class="room-image-text-wrapper">
                         <div class="room-image-box">
                             <img src="../media/img/single-bed.jpg" alt="single-bed">
+                            <div class="room-discount-box">
+                                <p>10% Uppge kod: Nu2021</p>
+                            </div>
                             <div class="room-overlay-box">
-                                <div class="room-overlay-title-box">Single-Bed</div>
-                                <p class="room-overlay-description-box">
+                                <h3>Enkelrum</h3>                       
+                                <p>
                                     Om du använder koden Nu2021 kan du få 10% 
                                     när du bokar ett rum hos oss.  
                                 </p>
                             </div>
                         </div>
-
                         <div class="room-info-text">
-                            <p> Det här är vårt single-bed rum. Avnjut din vistelse med 
+                            <h3>Enkelrum</h3>
+                            <p>Avnjut din vistelse med 
                                 den viktigaste personen i ditt liv, nämligen dig själv. 
                                 Välj den stil som passar dig bäst, brons, silver eller guld.
                                 <br><br>
@@ -196,36 +196,47 @@
                         </div>
                     </div>
                     <div class="room-form-wrapper">
-                        <h3>Jag vill boka</h3>
-                        <form>
-                            <input type="radio" checked="checked" name="radio" value="bronze">
-                            <label class="bronze checkboxes">Bronspaketet</label><br>
-
-                            <input type="radio" name="radio" value="silver">
-                            <label class="silver checkboxes">Silverpaketet</label><br>
-
-                            <input type="radio" name="radio" value="gold">
-                            <label class="gold checkboxes">Guldpaketet</label><br><br>
-
-                            <input class="submit-button" type="submit" value="Submit">
-                        </form> 
+                        <div class="room-info-form">
+                            <h3>Jag vill boka</h3>
+                            <form>
+                                <div class="input-wrapper">
+                                    <div>
+                                        <input type="radio" checked="checked" name="radio" value="bronze">
+                                        <label class="bronze checkboxes">Bronspaketet</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" value="silver">
+                                        <label class="silver checkboxes">Silverpaketet</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" value="gold">
+                                        <label class="gold checkboxes">Guldpaketet</label>
+                                    </div> 
+                                </div>
+                                <button class="btn-oval-color" type="submit" value="bokat">Boka</button>
+                            </form> 
+                        </div>
                     </div>
                 </article>
 
                 <article class="room-box col-6">
                     <div class="room-image-text-wrapper">
                         <div class="room-image-box">
-                            <img src="../media/img/single-bed.jpg" alt="double-bed">
+                            <img src="../media/img/single-bed.jpg" alt="single-bed">
+                            <div class="room-discount-box">
+                                <p>10% Uppge kod: Nu2021</p>
+                            </div>
                             <div class="room-overlay-box">
-                                <div class="room-overlay-title-box">Double-Bed</div>
-                                <p class="room-overlay-description-box">
+                                <h3>Dubbelrum</h3>                       
+                                <p>
                                     Om du använder koden Nu2021 kan du få 10% 
                                     när du bokar ett rum hos oss.  
                                 </p>
                             </div>
                         </div>
                         <div class="room-info-text">
-                            <p>Det här är vårt double-bed rum. Avnjut din vistelse tillsammans
+                            <h3>Dubbelrum</h3>
+                            <p>Avnjut din vistelse tillsammans
                                 med ditt sällskap. 
                                 Välj den stil som passar er bäst, brons, silver eller guld.
                                 <br><br>
@@ -236,16 +247,21 @@
                         <div class="room-info-form">
                             <h3>Jag vill boka</h3>
                             <form>
-                                <input type="radio" checked="checked" name="radio" value="bronze">
-                                <label class="bronze checkboxes">Bronspaketet</label><br>
-    
-                                <input type="radio" name="radio" value="silver">
-                                <label class="silver checkboxes">Silverpaketet</label><br>
-    
-                                <input type="radio" name="radio" value="gold">
-                                <label class="gold checkboxes">Guldpaketet</label><br><br>
-    
-                                <input class="submit-button" type="submit" value="Submit">
+                                <div class="input-wrapper">
+                                    <div>
+                                        <input type="radio" checked="checked" name="radio" value="bronze">
+                                        <label class="bronze checkboxes">Bronspaketet</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" value="silver">
+                                        <label class="silver checkboxes">Silverpaketet</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="radio" value="gold">
+                                        <label class="gold checkboxes">Guldpaketet</label>
+                                    </div> 
+                                </div>
+                                <button class="btn-oval-color" type="submit" value="bokat">Boka</button>
                             </form> 
                         </div>
                     </div>
@@ -304,7 +320,6 @@
                 </div>
             </div> 
         </section>
-        <!-- slut innehåll -->
     </main>
 
     <footer>
@@ -349,6 +364,6 @@
         <p class="copyright col-12">Copyright <i class="far fa-copyright"></i> [Företagsnamn] Hotell & Spa 2021</p>
     </footer>
 
-    <script src="../script/main.js"></script><!--kod för javascript som ska komma efter-->
+    <script src="../script/main.js"></script>
     </body>
 </html>
