@@ -51,12 +51,15 @@
     background-color: transparent;
     border: 2px solid white;
     border-radius: 17px;
-    color: white;
-    font-size: 1em;
     transition: 0.5s;
 }
 .landing-overlay-text-wrapper button:hover{
     background-color:rgba(109, 191, 194, 0.493);
+}
+.landing-overlay-text-wrapper a{
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
 }
 .small-booking-wrapper{
     visibility: hidden;
@@ -240,12 +243,15 @@
     background-color: transparent;
     border: 2px solid white;
     border-radius: 17px;
-    color: white;
-    font-size: 16px;
     transition: 0.5s;
 }
 .middle-header button:hover{
     background-color:rgba(109, 191, 194, 0.493);
+}
+.middle-header a{
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
 }
 .middle-overlay{
      display: none;
@@ -313,13 +319,13 @@
         margin-top: 20px;
         padding: 10px 20px;
         background-color: black;
-        color: white;
-        font-size: 16px;
         border: 1px solid black;
         border-radius: 17px;
         transition: 0.5s;
     }
     .middle-overlay a{
+        color: white;
+        font-size: 16px;
         text-decoration: none;
     }
     .middle-overlay button:hover{
